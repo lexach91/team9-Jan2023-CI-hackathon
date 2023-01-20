@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/output.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <!-- jQuery UI -->
     <link
       rel="stylesheet"
@@ -13,6 +14,29 @@
     />
   </head>
   <body>
+    <nav class="w-full bg-white fixed flex justify-between items-center flex-wrap shadow-sm">
+      <a href="#" class="logo">
+        <span class="font-semibold text-3xl tracking-tight">MOOVERS</span>
+      </a>
+      <div class="block hidden"> <!-- Hamburger menu-->
+        <button class="">
+        </button>
+      </div>
+      <ul class="nav-items text-base flex">
+        <a href="#" class="px-3 py-3">Home</a>
+        <a href="#search" class="px-3 py-3">Search</a>
+        <a href="#about-us" class="px-3 py-3">About Us</a>
+        <a href="#how-it-works" class="px-3 py-3">How It Works</a>
+      </ul>
+    </nav>
+    <!-- Hero -->
+    <div id="hero">
+      <div class="content">
+        <p class="font-semibold text-4xl text-white mb-8">Helping you moove <br>on a budget.</p>
+        <a href="#search" class="bg-white rounded-md mt-6 text-lg">Search Flights</a>
+      </div>
+    </div>
+
     <!-- use tailwind to create search box -->
     <div id="search-container" class="flex justify-center items-center h-screen">
       <div class="w-1/2">

@@ -2,3 +2,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+nav {
+padding: 10px 50px;
+}
+
+.nav-items {
+align-items: center;
+}
+
+#hero {
+background: url('/assets/img/hero-image-1.jpg') ;
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+height: 450px;
+}
+
+#hero .content {
+transform: translateY(150px);
+padding-left: 50px;        
+margin-bottom: -150px; /* offset transform */
+}
+
+#hero a {
+padding: 15px 20px;
+}
