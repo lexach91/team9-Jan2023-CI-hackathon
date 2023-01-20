@@ -5,27 +5,28 @@
 
 
 nav {
-padding: 10px 50px;
+    padding: 10px 50px;
+    z-index: 2;
 }
 
 .nav-items {
-align-items: center;
+    align-items: center;
 }
 
 #hero {
-background: url('/assets/img/hero-image-1.jpg') ;
-background-position: center center;
-background-repeat: no-repeat;
-background-size: cover;
-height: 450px;
+    background: url('/assets/img/hero-image-1.jpg') ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
 }
 
 #hero .content {
-transform: translateY(150px);
-padding-left: 50px;        
-margin-bottom: -150px; /* offset transform */
+    transform: translateY(150px);
+    padding-left: 50px;        
+    margin-bottom: -150px; /* offset transform */
 }
 
 #hero a {
-padding: 15px 20px;
+    padding: 15px 20px;
 }
