@@ -1672,12 +1672,8 @@ select {
 }
 
 nav {
-  padding: 10px 50px;
+  padding: 10px 20px;
   z-index: 2;
-}
-
-.nav-items {
-  align-items: center;
 }
 
 #hero {
@@ -1783,6 +1779,12 @@ nav {
   --tw-ring-offset-width: 2px;
 }
 
+@media (min-width: 640px) {
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
@@ -1802,7 +1804,7 @@ nav {
 }
 
 @media (min-width: 1024px) {
-  .lg\:hidden {
-    display: none;
+  .lg\:inline-block {
+    display: inline-block;
   }
 }

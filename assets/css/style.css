@@ -5,12 +5,8 @@
 
 
 nav {
-    padding: 10px 50px;
+    padding: 10px 20px;
     z-index: 2;
-}
-
-.nav-items {
-    align-items: center;
 }
 
 #hero {
@@ -29,4 +25,34 @@ nav {
 
 #hero a {
     padding: 15px 20px;
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+    #nav-items {
+        display: none;
+    }
+   
+    #nav-items.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 30px;
+        align-items: flex-start;
+    }
+
+    #nav.active {
+        top: 0;
+        bottom: 0;
+        align-content: flex-start;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    #mobile-menu {
+        display: none;
+    }
+
 }

@@ -14,21 +14,21 @@
     />
   </head>
   <body>
-    <nav class="w-full bg-white fixed flex justify-between items-center flex-wrap shadow-sm">
+    <nav id="nav" class="w-full bg-white fixed flex justify-between items-center flex-wrap shadow-sm">
       <a href="#" class="logo">
         <span class="font-semibold text-3xl tracking-tight">MOOVERS</span>
       </a>
-      <div class="block md:hidden"> <!-- Hamburger menu-->
+      <div id="mobile-menu" class="block"> <!-- Hamburger menu-->
         <button class="flex items-center px-3 py-2 border rounded text-gray-300">
           <!-- Resource: https://www.flaticon.com/free-icons/hamburger -->
           <img src="/assets/img/menu.png" width="20">
         </button>
       </div>
-      <ul class="nav-items text-base hidden md:flex">
-        <a href="#" class="px-3 py-3">Home</a>
-        <a href="#search" class="px-3 py-3">Search</a>
-        <a href="#about-us" class="px-3 py-3">About Us</a>
-        <a href="#how-it-works" class="px-3 py-3">How It Works</a>
+      <ul id="nav-items" class="items-center text-base">
+        <a href="#" id="menu-item" class="nav-item px-3 py-3 lg:inline-block">Home</a>
+        <a href="#search" id="menu-item" class="nav-item px-3 py-3 lg:inline-block">Search</a>
+        <a href="#about-us" id="menu-item" class="nav-item px-3 py-3">About Us</a>
+        <a href="#how-it-works" id="menu-item" class="nav-item px-3 py-3">How It Works</a>
       </ul>
     </nav>
     <!-- Hero -->
