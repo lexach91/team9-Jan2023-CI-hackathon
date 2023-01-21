@@ -4,17 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/output.css" />
+
+    <title>The Moovers</title>
+   <link rel="stylesheet" href="assets/css/output.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
     <!-- jQuery UI -->
     <link
       rel="stylesheet"
       href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
     />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <nav id="nav" class="w-full bg-white fixed flex justify-between items-center flex-wrap shadow-sm px-7 py-5 z-10">
+      <a href="#"> 
+        <span class="font-semibold text-3xl tracking-tight">MOOVERS</span>
+      </a>
+      <div id="mobile-menu" class="block">
+        <button class="flex items-center px-3 py-2 border rounded text-gray-300 md:hidden">
+          <!-- Resource: Hamburger icon https://www.flaticon.com/free-icons/hamburger -->
+          <img src="/assets/img/menu.png" width="20">
+        </button>
+      </div>
+      <ul id="nav-items" class="items-center text-base">
+        <a href="#" class="menu-item px-3 py-3">Home</a>
+        <a href="#search" class="menu-item px-3 py-3">Search</a>
+        <a href="#about-us" class="menu-item px-3 py-3">About Us</a>
+        <a href="#how-it-works" class="menu-item px-3 py-3">How It Works</a>
+      </ul>
+    </nav>
+    <div id="hero">
+      <div class="content pl-7 translate-y-36">
+        <p class="font-semibold text-4xl text-white mb-9">Helping you moove <br>on a budget.</p>
+        <a href="#search" class="bg-white rounded-md mt-6 text-lg px-3 py-5">Search Flights</a>
+      </div>
+    </div>
+
     <!-- use tailwind to create search box -->
-    <div id="search-container" class="flex justify-center items-center h-screen">
+    <div
+      id="search-container"
+      class="flex justify-center items-center h-screen"
+    >
       <div class="w-1/2">
         <div class="relative">
           <input
@@ -23,13 +62,78 @@
             class="w-full border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
             placeholder="Search"
           />
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" style="position: absolute; top: 50%; right: 0; transform: translateY(-50%); color: #a0aec0; margin: 0 10px;">
-            <path id="search-icon" stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+            style="
+              position: absolute;
+              top: 50%;
+              right: 0;
+              transform: translateY(-50%);
+              color: #a0aec0;
+              margin: 0 10px;
+            "
+          >
+            <path
+              id="search-icon"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
           </svg>
-          
         </div>
       </div>
+    </div>
 
+    <!-- Modal starts here -->
+    <button id="myBtn">Modal</button>
+
+    <div
+      id="myModal"
+      class="modal hidden fixed z-10 top-0 w-full h-full overflow-auto"
+    >
+      <!-- Modal content -->
+      <div class="modal-content bg-black text-white mx-auto mt-4 p-4 border w-3/4 sm:w-1/2">
+        <div>
+          <span class="close float-right text-xl cursor-pointer hover:text-red-500">&times;</span>
+          <p class="pb-2 border-b-[1px] border-red-500">How it works</p>
+          <br/>
+        </div>
+        <div>
+          <div class="flex py-2">
+            <i class="fa-solid fa-sack-dollar text-red-500"></i>
+            <p class="pl-4">Set your budget</p>
+          </div>
+          <div class="flex py-2">
+            <i class="fa-solid fa-magnifying-glass-location text-red-500"></i>
+            <p class="pl-4">Look for the cheapest flights and destinations</p>
+          </div>
+          <div class="flex py-2">
+            <i class="fa-solid fa-person-walking-luggage text-red-500"></i>
+            <p class="pl-4">Pack your luggage</p>
+          </div>
+          <div class="flex py-2">
+            <i class="fa-solid fa-plane-departure text-red-500"></i>
+            <p class="pl-4">Enjoy yourself!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end of modal  -->
+    <footer class="text-center h-full">
+      <div class="absolute inset-x-0 bottom-0 bg-black text-white">
+        <p class="p-4 tracking-wide">
+          &copy;<span id="copywright" class=""></span> The M<span
+            class="text-[#ff0080] tracking-wide"
+            >oo</span
+          >vers
+        </p>
+      </div>
+    </footer>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- jQuery UI -->
