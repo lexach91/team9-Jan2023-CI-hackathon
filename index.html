@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>The Moovers</title>
-    <!-- <link rel="stylesheet" href="assets/css/output.css" /> -->
+   <link rel="stylesheet" href="assets/css/output.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
     <!-- jQuery UI -->
     <link
       rel="stylesheet"
@@ -22,6 +25,30 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <nav id="nav" class="w-full bg-white fixed flex justify-between items-center flex-wrap shadow-sm px-7 py-5 z-10">
+      <a href="#"> 
+        <span class="font-semibold text-3xl tracking-tight">MOOVERS</span>
+      </a>
+      <div id="mobile-menu" class="block">
+        <button class="flex items-center px-3 py-2 border rounded text-gray-300 md:hidden">
+          <!-- Resource: Hamburger icon https://www.flaticon.com/free-icons/hamburger -->
+          <img src="/assets/img/menu.png" width="20">
+        </button>
+      </div>
+      <ul id="nav-items" class="items-center text-base">
+        <a href="#" class="menu-item px-3 py-3">Home</a>
+        <a href="#search" class="menu-item px-3 py-3">Search</a>
+        <a href="#about-us" class="menu-item px-3 py-3">About Us</a>
+        <a href="#how-it-works" class="menu-item px-3 py-3">How It Works</a>
+      </ul>
+    </nav>
+    <div id="hero">
+      <div class="content pl-7 translate-y-36">
+        <p class="font-semibold text-4xl text-white mb-9">Helping you moove <br>on a budget.</p>
+        <a href="#search" class="bg-white rounded-md mt-6 text-lg px-3 py-5">Search Flights</a>
+      </div>
+    </div>
+
     <!-- use tailwind to create search box -->
     <div
       id="search-container"

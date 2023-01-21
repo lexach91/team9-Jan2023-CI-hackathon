@@ -2,3 +2,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+#hero {
+    background: url('/assets/img/hero-image-1.jpg') ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+}
+
+/* ------- Media Queries ------- */
+
+@media only screen and (max-width: 768px) {
+    #nav-items {
+        display: none;
+    }
+   
+    #nav-items.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 30px;
+        align-items: flex-start;
+    }
+
+    #nav.active {
+        top: 0;
+        bottom: 0;
+        align-content: flex-start;
+    }
+}
