@@ -970,6 +970,10 @@ select {
   margin: -0.5rem;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -983,6 +987,16 @@ select {
 .-mx-3 {
   margin-left: -0.75rem;
   margin-right: -0.75rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-2\.5 {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
 }
 
 .ml-3 {
@@ -1185,8 +1199,13 @@ select {
   width: 50%;
 }
 
+<<<<<<< HEAD
+.w-3\/6 {
+  width: 50%;
+=======
 .w-3\/4 {
   width: 75%;
+>>>>>>> a3e7e234290b807d3a6f072165e35dfedcd40466
 }
 
 .min-w-0 {
@@ -1732,6 +1751,10 @@ select {
   font-weight: 600;
 }
 
+.font-extralight {
+  font-weight: 200;
+}
+
 .leading-6 {
   line-height: 1.5rem;
 }
@@ -1844,6 +1867,10 @@ select {
 
 .opacity-100 {
   opacity: 1;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow-lg {
