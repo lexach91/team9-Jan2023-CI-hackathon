@@ -36,17 +36,50 @@
         </button>
       </div>
       <ul id="nav-items" class="items-center text-base">
-        <a href="#" class="menu-item px-3 py-3">Home</a>
-        <a href="#search" class="menu-item px-3 py-3">Search</a>
-        <a href="#about-us" class="menu-item px-3 py-3">About Us</a>
-        <a href="#how-it-works" class="menu-item px-3 py-3">How It Works</a>
+        <!-- Resource: Icons https://fontawesome.com/ -->
+        <a href="#" class="menu-item px-3 py-3 md:hover:font-bold w-full">
+          <i class="fa-solid fa-house md:hidden mr-3"></i>
+          Home
+        </a>
+        <a href="#search" class="menu-item px-3 py-3 hover:font-bold w-full">
+          <i class="fa-sharp fa-solid fa-plane md:hidden mr-3"></i>
+          Search Flights
+        </a>
+        <a href="#about-us" class="menu-item px-3 py-3 hover:font-bold w-full">
+          <i class="fa-solid fa-circle-info md:hidden mr-3"></i>
+          About Us
+        </a>
+        <a href="#" id="myBtn" class="menu-item px-3 py-3 hover:font-bold w-full">
+          <i class="fa-solid fa-circle-question md:hidden mr-3"></i>
+          How It Works
+        </a>
       </ul>
     </nav>
-    <div id="hero">
-      <div class="content pl-7 translate-y-36">
-        <p class="font-semibold text-4xl text-white mb-9">Helping you moove <br>on a budget.</p>
-        <a href="#search" class="bg-white rounded-md mt-6 text-lg px-3 py-5">Search Flights</a>
+    <!-- Banner carousel -->
+    <div class="hero-heading pl-7 translate-y-48">
+      <h1 class="font-semibold text-white text-3xl md:text-5xl mb-11">Helping you <em>moove</em> <br>on a budget.</h1>
+      <a href="#search" class="bg-white rounded-md mt-6 text-lg px-3 py-5">Search Flights</a>
+    </div>
+    <div id="carousel">
+      <!-- Resource: Images from https://www.pexels.com/ -->
+      <!-- Slide 1-->
+      <div class="slides">
+        <img src="assets/img/hero-image-1.jpg" alt="Deep blue ocean with sunny blue skies" class="w-full" height=500>
       </div>
+      <!-- Slide 2 -->
+      <div class="slides">
+        <img src="assets/img/hero-image-2.jpg" alt="Body of Water With People Rowring on Boat Beside Tall Building Venice" class="w-full">
+      </div>
+      <!-- Slide 3 -->
+      <div class="slides">
+        <img src="assets/img/hero-image-3.jpg" alt="Brown rock formation of the sea" class="w-full">
+      </div>
+    </div>
+    <!-- Circle indicators -->
+    <div class="circle-indicators text-center -translate-y-10 ">
+      <span class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"></span>
+      <span class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"></span>
+      <span class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"></span>
     </div>
 
     <!-- use tailwind to create search box -->
@@ -90,7 +123,7 @@
     </div>
 
     <!-- Modal starts here -->
-    <button id="myBtn">Modal</button>
+    <!-- <button id="myBtn">Modal</button> -->
 
     <div
       id="myModal"
@@ -125,9 +158,9 @@
     </div>
     <!--end of modal  -->
     <footer class="text-center h-full">
-      <div class="absolute inset-x-0 bottom-0 bg-black text-white">
+      <div class="inset-x-0 bottom-0 bg-black text-white">
         <p class="p-4 tracking-wide">
-          &copy;<span id="copywright" class=""></span> The M<span
+          &copy;<span id="copywright" class=""></span> M<span
             class="text-[#ff0080] tracking-wide"
             >oo</span
           >vers
