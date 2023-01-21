@@ -1186,6 +1186,8 @@ select {
   resize: both;
 }
 
+<<<<<<< HEAD
+=======
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1194,10 +1196,13 @@ select {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+>>>>>>> 16a7fb0deb18df1d54176a1eea05133c817cfed6
 .flex-col {
   flex-direction: column;
 }
 
+<<<<<<< HEAD
+=======
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -1206,6 +1211,7 @@ select {
   align-items: flex-start;
 }
 
+>>>>>>> 16a7fb0deb18df1d54176a1eea05133c817cfed6
 .items-center {
   align-items: center;
 }
