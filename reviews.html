@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/output.css" />
+    <!-- jQuery UI -->
+    <link rel="stylesheet"
+        href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <script src="https://kit.fontawesome.com/92bb20ec43.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- Review section -->
+    <section 
+        class="review-cards mx-auto p-4 container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Review header -->
+        <article class="review-header tile col-span-1 md:col-span-2 lg:col-span-3">
+            <div class="py-2">
+                <h2 class="text-2xl font-bold">Customer Reviews</h2>
+            </div>
+            <div class="leading-8 content-end grid grid-cols-1 md:grid-cols-[max-content_1fr]">
+                <div class="text-xl pr-2">
+                    <p>
+                        <span class="text-yellow-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                class="fa-regular fa-star"></i></span> 4.5/5 Stars
+                    </p>
+                </div>
+                <div class="text-slate-600">
+                    <p>2,698 global reiews</p>
+                </div>
+            </div>
+        </article>
+        <!-- Card 1 -->
+        <article
+            class="review-card-container grid h-[350px] min-w-[200px] max-w-[300px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-500">
+            <div class="review-card">
+                <div class="review-card-top grid grid-cols-2 p-3 place-items-center">
+                    <img src="assets/img/man.jpg" alt="Reviewer image"
+                        class="rounded-full h-[75px] w-[75px] object-cover">
+                    <div class="text-yellow-400 justify-self-start">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                </div>
+                <div class="review-card-bottom p-5">
+                    <h4 class="text-xl font-semibold">John Smith</h4>
+                    <h5 class="text-sm text-slate-600">London</h5>
+                    <p class="italic pt-4">"Saved me a ton of money!"</p>
+                </div>
+            </div>
+        </article>
+        <!-- Card 2 -->
+        <article
+            class="review-card-container grid h-[350px] min-w-[200px] max-w-[300px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-500">
+            <div class="review-card">
+                <div class="review-card-top grid grid-cols-2 p-3 place-items-center">
+                    <img src="assets/img/woman.jpg" alt="Reviewer image"
+                        class="rounded-full h-[75px] w-[75px] object-cover">
+                    <div class="text-yellow-400 justify-self-start">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                </div>
+                <div class="review-card-bottom p-5">
+                    <h4 class="text-xl font-semibold">Jane Smith</h4>
+                    <h5 class="text-sm text-slate-600">Manchester</h5>
+                    <p class="italic pt-4">"I've been to places I would never have even thought of, and saved money in
+                        the process!"</p>
+                </div>
+            </div>
+        </article>
+        <!-- Card 3 - Will be hidden on mobile and tablet view -->
+        <article
+            class="review-card-container hidden lg:block grid h-[350px] min-w-[200px] max-w-[300px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-500">
+            <div class="review-card">
+                <div class="review-card-top grid grid-cols-2 p-3 place-items-center">
+                    <img src="assets/img/woman2.jpg" alt="Reviewer image"
+                        class="rounded-full h-[75px] w-[75px] object-cover">
+                    <div class="text-yellow-400 justify-self-start">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="review-card-bottom p-5">
+                    <h4 class="text-xl font-semibold">Joan Smith</h4>
+                    <h5 class="text-sm text-slate-600">Dublin</h5>
+                    <p class="italic pt-4">"I never thought my pension would stretch to another holiday abroad until I
+                        found Moovers"</p>
+                </div>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>

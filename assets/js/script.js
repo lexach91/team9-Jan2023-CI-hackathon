@@ -20,6 +20,31 @@ for(let i = 0; i < menuItem.length; i++) {
   })    
 }
 
+// Carousel banner
+var circleIndex = 0;
+var slideIndex = 0;
+
+// Function to loop through carousel slides
+function showCarousel() {
+  var slides = document.getElementsByClassName("slides");
+  var circles = document.getElementsByClassName("circle");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none"; // hide slides
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex-1].style.display = "block"; // show slide
+  setTimeout(showCarousel, 3000); // 3 seconds scroll
+  for (i = 0; i < circles.length; i++) {
+    circles[i].className = circles[i].className.replace(" active", "");
+  }
+  circles[slideIndex-1].className += " active";
+}
+
+showCarousel();
+
 let copywright = document.getElementById("copywright");
 let year = new Date().getFullYear();
 const modal = document.getElementById("myModal");
