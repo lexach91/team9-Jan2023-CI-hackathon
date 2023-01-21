@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +8,66 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/output.css" />
     <!-- jQuery UI -->
-    <link
-      rel="stylesheet"
-      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
-    />
+    <link rel="stylesheet"
+        href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
     <script src="https://kit.fontawesome.com/92bb20ec43.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    <section class="review-cards container m-auto grid grid-cols-3 gap-4">
-        <div class="review-card grid my-2.5 h-64 shadow-lg rounded-lg">
-            <div class="grid grid-cols-2 place-items-center">
-                <img src="assets/img/happy-1836445_1920.jpg" alt="Reviewer image" class="rounded-full h-3/6 w-3/6">
-                <div><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+    <section class="review-cards container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center p-16 gap-4" >
+        <article class="review-card-container">
+            <div class="review-card grid h-[350px] min-w-[200px] max-w-[300px] shadow-lg rounded-lg shadow-slate-500">
+                <div class="review-card-top grid grid-cols-2 place-items-center">
+                    <img src="assets/img/happy-1836445_1920.jpg" alt="Reviewer image"
+                        class="rounded-full h-[75px] w-[75px] object-cover">
+                    <div class="text-yellow-400 justify-self-start">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="review-card-bottom pl-4">
+                    <h4 class="text-xl font-semibold">John Smith</h4>
+                    <h5 class="text-sm text-slate-600">London</h5>                
+                    <p class="italic pt-2">"Saved me a ton of money!"</p>
+                </div>
             </div>
-            <div class="px-6">
-            <h4 class="text-xl font-semibold">John Smith</h4>
-            <h5 class="text-sm">London</h5>
-            <br>
-            <p><em>"Saved me a ton of money!"</em></p>
+        </article>
+        <article class="review-card-container">
+            <div class="review-card grid h-[350px] min-w-[200px] max-w-[300px] shadow-lg rounded-lg shadow-slate-500">
+                <div class="review-card-top grid grid-cols-2 place-items-center">
+                    <img src="assets/img/happy-1836445_1920.jpg" alt="Reviewer image"
+                        class="rounded-full h-[75px] w-[75px] object-cover">
+                    <div class="text-yellow-400 justify-self-start">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="review-card-bottom pl-4">
+                    <h4 class="text-xl font-semibold">John Smith</h4>
+                    <h5 class="text-sm text-slate-600">London</h5>                
+                    <p class="italic pt-2">"Saved me a ton of money!"</p>
+                </div>
             </div>
-        </div>
-        <div class="review-card grid my-2.5 h-64 shadow-lg rounded-lg">Test</div>
-        <div class="review-card grid my-2.5 h-64 shadow-lg rounded-lg">Test</div>
+        </article>
+        <article class="review-card-container hidden lg:block">
+            <div class="review-card grid h-[350px] min-w-[200px] max-w-[300px] shadow-lg rounded-lg shadow-slate-500">
+                <div class="review-card-top grid grid-cols-2 place-items-center">
+                    <img src="assets/img/happy-1836445_1920.jpg" alt="Reviewer image"
+                        class="rounded-full h-[75px] w-[75px] object-cover">
+                    <div class="text-yellow-400 justify-self-start">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="review-card-bottom pl-4">
+                    <h4 class="text-xl font-semibold">John Smith</h4>
+                    <h5 class="text-sm text-slate-600">London</h5>                
+                    <p class="italic pt-2">"Saved me a ton of money!"</p>
+                </div>
+            </div>
+        </article>
     </section>
 </body>
+
 </html>
