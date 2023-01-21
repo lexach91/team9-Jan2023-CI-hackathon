@@ -1948,4 +1948,8 @@ select {
     font-size: 3rem;
     line-height: 1;
   }
+
+  .md\:hover\:font-bold:hover {
+    font-weight: 700;
+  }
 }
