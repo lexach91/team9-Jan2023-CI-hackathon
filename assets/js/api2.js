@@ -74,16 +74,24 @@ const getPopularCities = async (origin, currency) => {
 $("#city-search").on("focus", (e) => {
     $('#form-left').removeClass('w-full');
     $('#form-left').addClass('w-1/3');
+    $('#currency').removeClass('hidden');
     $('#currency').removeClass('invisible');
     $('#currency').removeClass('w-0');
     $('#currency').addClass('w-full');
+    $('#max-price').removeClass('hidden');
     $('#max-price').removeClass('invisible');
     $('#max-price').removeClass('w-0');
     $('#max-price').addClass('w-full');
+    // $('#max-price ~ svg').removeClass('hidden');
     $('#max-price ~ svg').removeClass('invisible');
     $('#form-right').removeClass('w-0');
     $('#form-right').addClass('w-2/3');
     $('#form-right').removeClass('invisible');
+    $('#form-right').removeClass('hidden');
+    $('#search-button').removeClass('hidden');
+    $('#search-button').removeClass('invisible');
+    $('#search-button').removeClass('w-0');
+    $('#search-button').addClass('w-full');
 });
 
 // $("#city-search").on("blur", (e) => {
@@ -98,21 +106,34 @@ $("#city-search").on("focus", (e) => {
 // });
 
 $(document).on("click", (e) => {
-    // if e.target is not an any child of #animated-search-form 
-    if (!$(e.target).closest("#animated-search-form").length) {
+    // if e.target is not an any child of #animated-search-form or #city-search-dropdown
+    if (!$(e.target).closest("#animated-search-form").length && !$(e.target).closest("div[data-code]").length) {
+        console.log("clicked outside");
+        console.log(e.target);
         $('#form-left').removeClass('w-1/3');
         $('#form-left').addClass('w-full');
         $('#currency').removeClass('w-full');
         $('#currency').addClass('w-0');
         $('#currency').addClass('invisible');
+        $('#currency').addClass('hidden');
         $('#max-price').removeClass('w-full');
         $('#max-price').addClass('w-0');
         $('#max-price').addClass('invisible');
+        $('#max-price').addClass('hidden');
         $('#max-price ~ svg').addClass('invisible');
         $('#form-right').removeClass('w-2/3');
         $('#form-right').addClass('w-0');
         $('#form-right').addClass('invisible');
+        $('#form-right').addClass('hidden');
+        $('#search-button').removeClass('w-full');
+        $('#search-button').addClass('w-0');
+        $('#search-button').addClass('invisible');
+        $('#search-button').addClass('hidden');
     }
+});
+$("#city-search").on("blur", (e) => {
+    console.log('blur');
+    console.log(e.target);
 });
 
 let searchingAirports = false;
@@ -170,17 +191,74 @@ $("#city-search").on("input", (e) => {
             $('#city-search-dropdown').empty();
             $('#city-search-dropdown').addClass('invisible');
             $('#city-search').val(airportCode);
-            const chosenCurrency = $('#currency').val();
-            const maxPrice = $('#max-price').val();
-            getPopularCities(airportCode, chosenCurrency).then((data) => {
-                console.log(data);
-                $('#flight-search-results').empty();
-                data.forEach((flight) => {
-                    console.log(flight);
-                });
-            });
+            // make search button enabled
+            $('#search-button').attr('disabled', false);
+            $('#search-button').removeClass('bg-gray-200');
+            $('#search-button').addClass('bg-blue-200');
         });
-
     });
     searchingAirports = false;
+});
+
+$('#search-button').on('click', (e) => {
+    $('#results-placeholder').show();
+    $('#results').addClass('hidden');
+    $('#results-placeholder img').addClass('animate-bounce');
+    $('#results-placeholder p').hide();
+    const airportCode = $('#city-search').val();
+    const chosenCurrency = $('#currency').val();
+    const maxPrice = $('#max-price').val();
+    getPopularCities(airportCode, chosenCurrency).then((data) => {
+        console.log(data);
+        $('#results').empty();
+        // $('results').removeClass('hidden');
+        let results = Object.values(data);
+        console.log(results);
+        if (maxPrice){
+            results = results.filter((flight) => {
+                return flight.price <= maxPrice;
+            });
+            console.log(results);
+        }
+        results.sort((a, b) => {
+            return a.price - b.price;
+        });
+        results.forEach((flight) => {
+            console.log(flight);
+            const origin = flight.origin;
+            const destination = flight.destination;
+            const price = flight.price;
+            const departure_at = new Date(flight.departure_at).toLocaleString();
+            const return_at = new Date(flight.return_at).toLocaleString();
+            const transfers = flight.transfers;
+            const flightOption = `
+            <div class="flex flex-col items-center justify-center w-full p-4 border border-gray-200 rounded-md">
+                <div class="flex items-center justify-between w-full">
+                    <div class="flex flex-col">
+                        <span class="font-bold">${origin}</span>
+                        <span class="text-gray-500 text-sm">${departure_at}</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold">${destination}</span>
+                        <span class="text-gray-500 text-sm">${return_at}</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between w-full mt-4">
+                    <div class="flex flex-col">
+                        <span class="font-bold">${price} ${chosenCurrency}</span>
+                        <span class="text-gray-500 text-sm">${transfers} transfers</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <button class="px-4 py-2 font-bold text-white bg-blue-200 rounded-md">Book</button>
+                    </div>
+                </div>
+            </div>`;
+            $('#results-placeholder').hide();
+            $('#results').removeClass('hidden');
+            $('#results').append(flightOption);
+
+            // $('#flight-search-results').addClass('overflow-y-scroll');
+            // $('#flight-search-results').removeClass('justify-center');
+        });
+    });
 });
