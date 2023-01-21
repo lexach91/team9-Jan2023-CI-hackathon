@@ -12,6 +12,10 @@
     height: 450px;
 }
 
+.about-background {
+    background: url('/assets/img/cow-seamless.jpg');
+}
+
 /* ------- Media Queries ------- */
 
 @media only screen and (max-width: 768px) {
