@@ -77,6 +77,10 @@ $("#city-search").on("focus", (e) => {
     $('#currency').removeClass('invisible');
     $('#currency').removeClass('w-0');
     $('#currency').addClass('w-full');
+    $('#max-price').removeClass('invisible');
+    $('#max-price').removeClass('w-0');
+    $('#max-price').addClass('w-full');
+    $('#max-price ~ svg').removeClass('invisible');
     $('#form-right').removeClass('w-0');
     $('#form-right').addClass('w-2/3');
     $('#form-right').removeClass('invisible');
@@ -101,14 +105,57 @@ $(document).on("click", (e) => {
         $('#currency').removeClass('w-full');
         $('#currency').addClass('w-0');
         $('#currency').addClass('invisible');
+        $('#max-price').removeClass('w-full');
+        $('#max-price').addClass('w-0');
+        $('#max-price').addClass('invisible');
+        $('#max-price ~ svg').addClass('invisible');
         $('#form-right').removeClass('w-2/3');
         $('#form-right').addClass('w-0');
         $('#form-right').addClass('invisible');
     }
 });
 
+let searchingAirports = false;
 $("#city-search").on("input", (e) => {
-    $("#results-placeholder img").addClass("animate-bounce");
-    $("#results-placeholder p").hide();
-    
+    const query = e.target.value;
+    if (query.length < 3){
+        $('#city-search-dropdown').empty();
+        $('#city-search-dropdown').addClass('invisible');
+        return;
+    }
+    if (searchingAirports) {
+        return;
+    }
+    searchingAirports = true;
+    getNearbyAirports(query).then((data) => {
+        $('#city-search-dropdown').empty();
+        data.forEach((airport) => {
+            console.log(airport);
+            const airportName = airport.detailedName;
+            const airportCode = airport.iataCode;
+            const airportCity = airport.address.cityName;
+            const airportCountry = airport.address.countryCode;
+            const airportOption = `
+            <div class="flex items-center justify-between px-4 py-2 cursor-pointer hover:bg-gray-200" data-code="${airportCode}">
+                <div class="flex flex-col">
+                    <span class="font-bold">${airportName}</span>
+                    <span class="text-gray-500 text-sm">${airportCity}/${airportCountry}</span>
+                    <span class="font-bold text-sm">${airportCode}</span>
+                </div>
+            </div>`;
+            airportOption.addEventListener('click', (e) => {
+                const airportCode = e.target.dataset.code;
+                console.log(airportCode);
+                $('#city-search-dropdown').empty();
+                $('#city-search-dropdown').addClass('invisible');
+                $('#city-search').val(airportCode);
+                const chosenCurrency = $('#currency').val();
+                const maxPrice = $('#max-price').val();
+            });
+            $('#city-search-dropdown').append(airportOption);
+        });
+        $('#city-search-dropdown').removeClass('invisible');
+
+    });
+    searchingAirports = false;
 });
