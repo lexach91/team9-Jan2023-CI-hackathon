@@ -967,6 +967,10 @@ select {
   margin-top: 0px;
 }
 
+.mb-9 {
+  margin-bottom: 2.25rem;
+}
+
 .block {
   display: block;
 }
@@ -1120,6 +1124,11 @@ select {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-36 {
+  --tw-translate-y: 9rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .scale-95 {
   --tw-scale-x: .95;
   --tw-scale-y: .95;
@@ -1150,6 +1159,10 @@ select {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .flex-wrap {
@@ -1403,6 +1416,21 @@ select {
   padding-right: 0px;
 }
 
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .px-0\.5 {
   padding-left: 0.125rem;
   padding-right: 0.125rem;
@@ -1446,6 +1474,10 @@ select {
 
 .pr-16 {
   padding-right: 4rem;
+}
+
+.pl-7 {
+  padding-left: 1.75rem;
 }
 
 .text-center {
@@ -1671,11 +1703,6 @@ select {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-nav {
-  padding: 10px 20px;
-  z-index: 2;
-}
-
 #hero {
   background: url('/assets/img/hero-image-1.jpg') ;
   background-position: center center;
@@ -1684,15 +1711,26 @@ nav {
   height: 450px;
 }
 
-#hero .content {
-  transform: translateY(150px);
-  padding-left: 50px;
-  margin-bottom: -150px;
-  /* offset transform */
-}
+/* ------- Media Queries ------- */
 
-#hero a {
-  padding: 15px 20px;
+@media only screen and (max-width: 768px) {
+  #nav-items {
+    display: none;
+  }
+
+  #nav-items.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+    align-items: flex-start;
+  }
+
+  #nav.active {
+    top: 0;
+    bottom: 0;
+    align-content: flex-start;
+  }
 }
 
 .focus\:border-indigo-300:focus {
@@ -1779,17 +1817,7 @@ nav {
   --tw-ring-offset-width: 2px;
 }
 
-@media (min-width: 640px) {
-  .sm\:flex-col {
-    flex-direction: column;
-  }
-}
-
 @media (min-width: 768px) {
-  .md\:flex {
-    display: flex;
-  }
-
   .md\:hidden {
     display: none;
   }
@@ -1800,11 +1828,5 @@ nav {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:inline-block {
-    display: inline-block;
   }
 }

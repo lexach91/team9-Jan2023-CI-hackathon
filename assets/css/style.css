@@ -4,11 +4,6 @@
 @tailwind utilities;
 
 
-nav {
-    padding: 10px 20px;
-    z-index: 2;
-}
-
 #hero {
     background: url('/assets/img/hero-image-1.jpg') ;
     background-position: center center;
@@ -17,20 +12,9 @@ nav {
     height: 450px;
 }
 
-#hero .content {
-    transform: translateY(150px);
-    padding-left: 50px;        
-    margin-bottom: -150px; /* offset transform */
-}
+/* ------- Media Queries ------- */
 
-#hero a {
-    padding: 15px 20px;
-}
-
-
-
-
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     #nav-items {
         display: none;
     }
@@ -48,11 +32,4 @@ nav {
         bottom: 0;
         align-content: flex-start;
     }
-}
-
-@media only screen and (min-width: 769px) {
-    #mobile-menu {
-        display: none;
-    }
-
 }
