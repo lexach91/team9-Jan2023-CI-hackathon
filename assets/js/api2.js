@@ -228,8 +228,9 @@ $('#search-button').on('click', (e) => {
             const origin = flight.origin;
             const destination = flight.destination;
             const price = flight.price;
-            const departure_at = new Date(flight.departure_at).toLocaleString();
-            const return_at = new Date(flight.return_at).toLocaleString();
+            const departure_at = new Date(flight.departure_at).toLocaleString().slice(0, -3);
+            console.log(typeof(departure_at))
+            const return_at = new Date(flight.return_at).toLocaleString().slice(0, -3);
             const transfers = flight.transfers;
             const flightOption = `
             <div class="flex flex-col items-center justify-center w-full p-4 border border-gray-200 rounded-md">
