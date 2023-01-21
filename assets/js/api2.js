@@ -131,30 +131,55 @@ $("#city-search").on("input", (e) => {
         $('#city-search-dropdown').empty();
         data.forEach((airport) => {
             console.log(airport);
-            const airportName = airport.detailedName;
+            const airportName = airport.name;
             const airportCode = airport.iataCode;
             const airportCity = airport.address.cityName;
             const airportCountry = airport.address.countryCode;
             const airportOption = `
             <div class="flex items-center justify-between px-4 py-2 cursor-pointer hover:bg-gray-200" data-code="${airportCode}">
-                <div class="flex flex-col">
+                <div class="flex flex-col" data-code="${airportCode}">
                     <span class="font-bold">${airportName}</span>
                     <span class="text-gray-500 text-sm">${airportCity}/${airportCountry}</span>
                     <span class="font-bold text-sm">${airportCode}</span>
                 </div>
             </div>`;
-            airportOption.addEventListener('click', (e) => {
-                const airportCode = e.target.dataset.code;
-                console.log(airportCode);
-                $('#city-search-dropdown').empty();
-                $('#city-search-dropdown').addClass('invisible');
-                $('#city-search').val(airportCode);
-                const chosenCurrency = $('#currency').val();
-                const maxPrice = $('#max-price').val();
-            });
             $('#city-search-dropdown').append(airportOption);
+            // airportOption.addEventListener('click', (e) => {
+            //     const airportCode = e.target.dataset.code;
+            //     console.log(airportCode);
+            //     $('#city-search-dropdown').empty();
+            //     $('#city-search-dropdown').addClass('invisible');
+            //     $('#city-search').val(airportCode);
+            //     const chosenCurrency = $('#currency').val();
+            //     const maxPrice = $('#max-price').val();
+            //     getPopularCities(airportCode, chosenCurrency).then((data) => {
+            //         console.log(data);
+            //         $('#flight-search-results').empty();
+            //         data.forEach((flight) => {
+            //             console.log(flight);
+            //         });
+            //     });
+            // });
+            // console.log(airportOption);
         });
         $('#city-search-dropdown').removeClass('invisible');
+        $('#city-search-dropdown > div').on('click', (e) => {
+            console.log(e.target);
+            const airportCode = $(e.target).closest('div').data('code') || $(e.target).data('code');
+            console.log(airportCode);
+            $('#city-search-dropdown').empty();
+            $('#city-search-dropdown').addClass('invisible');
+            $('#city-search').val(airportCode);
+            const chosenCurrency = $('#currency').val();
+            const maxPrice = $('#max-price').val();
+            getPopularCities(airportCode, chosenCurrency).then((data) => {
+                console.log(data);
+                $('#flight-search-results').empty();
+                data.forEach((flight) => {
+                    console.log(flight);
+                });
+            });
+        });
 
     });
     searchingAirports = false;
