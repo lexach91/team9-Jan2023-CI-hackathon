@@ -1199,13 +1199,14 @@ select {
   width: 50%;
 }
 
-<<<<<<< HEAD
+
 .w-3\/6 {
   width: 50%;
-=======
+ }
+
 .w-3\/4 {
   width: 75%;
->>>>>>> a3e7e234290b807d3a6f072165e35dfedcd40466
+
 }
 
 .min-w-0 {
@@ -1325,6 +1326,7 @@ select {
   resize: both;
 }
 
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1333,9 +1335,11 @@ select {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+
 .flex-col {
   flex-direction: column;
 }
+
 
 .flex-wrap {
   flex-wrap: wrap;
