@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>The Moovers</title>
+    <title>Moovers</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/cow.png">
    <link rel="stylesheet" href="assets/css/output.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -55,11 +56,31 @@
         </a>
       </ul>
     </nav>
-    <div id="hero">
-      <div class="content pl-7 translate-y-48">
-        <h1 class="font-semibold text-white text-3xl md:text-5xl mb-11">Helping you <em>moove</em> <br>on a budget.</h1>
-        <a href="#search" class="bg-white rounded-md mt-6 text-lg px-3 py-5">Search Flights</a>
+    <!-- Banner carousel -->
+    <div class="hero-heading pl-7 translate-y-48">
+      <h1 class="font-semibold text-white text-3xl md:text-5xl mb-11">Helping you <em>moove</em> <br>on a budget.</h1>
+      <a href="#search" class="bg-white rounded-md mt-6 text-lg px-3 py-5">Search Flights</a>
+    </div>
+    <div id="carousel">
+      <!-- Resource: Images from https://www.pexels.com/ -->
+      <!-- Slide 1-->
+      <div class="slides">
+        <img src="assets/img/hero-image-1.jpg" alt="Deep blue ocean with sunny blue skies" class="w-full" height=500>
       </div>
+      <!-- Slide 2 -->
+      <div class="slides">
+        <img src="assets/img/hero-image-2.jpg" alt="Body of Water With People Rowring on Boat Beside Tall Building Venice" class="w-full">
+      </div>
+      <!-- Slide 3 -->
+      <div class="slides">
+        <img src="assets/img/hero-image-3.jpg" alt="Brown rock formation of the sea" class="w-full">
+      </div>
+    </div>
+    <!-- Circle indicators -->
+    <div class="circle-indicators text-center -translate-y-10 ">
+      <span class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"></span>
+      <span class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"></span>
+      <span class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"></span>
     </div>
 
     <!-- use tailwind to create search box -->
