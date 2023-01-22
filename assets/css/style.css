@@ -47,20 +47,30 @@ html {
 }
 
 .about-bg {
-    opacity: 0.2;
+    opacity: 0.15;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    background: url(assets/img/cow-seamless.jpg);
+    background-repeat: repeat;
+    opacity: 0.4;
 }
 
 .about-content {
     position: relative;
 }
 
+.about-content h2 span {
+    color: #ff0080;
+}
+
 .about-content p {
-    border: 5px black;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #fff;
+    backdrop-filter: blur(5px);
 }
 
 
