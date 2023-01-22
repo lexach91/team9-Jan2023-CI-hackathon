@@ -40,6 +40,7 @@ html {
     animation: typing 500ms steps(40, end) infinite;
 }
 
+
 #about-us {
     overflow: hidden;
     position: relative;
@@ -61,6 +62,7 @@ html {
 .about-content p {
     border: 5px black;
 }
+
 
 /* ------- Media Queries ------- */
 
