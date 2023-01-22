@@ -168,6 +168,18 @@ $("#city-search").on("input", (e) => {
   }
   searchingAirports = true;
   getNearbyAirports(query).then((data) => {
+    if (data.length === 0) {
+      $("#city-search-dropdown").empty();
+      $("#city-search-dropdown").removeClass("invisible");
+      const airportOption = `
+          <div class="flex items-center justify-between px-4 py-2 cursor-pointer hover:bg-gray-200">
+              <div class="flex flex-col">
+                  <span class="font-bold">No airports found</span>
+              </div>
+          </div>`;
+      $("#city-search-dropdown").append(airportOption);
+      return;
+    }
     $("#city-search-dropdown").empty();
     data.forEach((airport) => {
       console.log(airport);
@@ -216,7 +228,9 @@ $("#city-search").on("input", (e) => {
       $("#search-button").removeClass("bg-gray-200");
       $("#search-button").addClass("bg-blue-200");
     });
-  });
+  }).catch((err) => {
+        console.log(err);        
+    });
   searchingAirports = false;
 });
 
@@ -229,7 +243,19 @@ $("#search-button").on("click", (e) => {
   const chosenCurrency = $("#currency").val();
   const maxPrice = $("#max-price").val();
   getPopularCities(airportCode, chosenCurrency).then((data) => {
-    console.log(data);
+    if (data.length === 0) {
+        $("#results-placeholder").hide();
+        $("#results").removeClass("hidden");
+        $("#results").empty();
+        const noResults = `
+                <div class="flex items-center justify-between px-4 py-2 cursor-pointer hover:bg-gray-200">
+                    <div class="flex flex-col">
+                        <span class="font-bold">No results found</span>
+                    </div>
+                </div>`;
+        $("#results").append(noResults);
+        return;
+    }
     $("#results").empty();
     // $('results').removeClass('hidden');
     let results = Object.values(data);
@@ -243,6 +269,12 @@ $("#search-button").on("click", (e) => {
     results.sort((a, b) => {
       return a.price - b.price;
     });
+    if (results.length === 0) {
+        $("#results-placeholder img").removeClass("animate-bounce");
+        $("#results-placeholder p").show();
+        $("#results-placeholder p").text("So sorry, no results found.");
+        return;        
+    }
     results.forEach((flight) => {
       console.log(flight);
       const origin = flight.origin;
@@ -285,5 +317,11 @@ $("#search-button").on("click", (e) => {
       // $('#flight-search-results').addClass('overflow-y-scroll');
       // $('#flight-search-results').removeClass('justify-center');
     });
+  }).catch((err) => {
+        console.log(err);
+        $("#results-placeholder").show();
+        $("#results-placeholder img").removeClass("animate-bounce");
+        $("#results-placeholder p").show();
+        $("#results-placeholder p").text("So sorry, no results found.");
   });
 });
