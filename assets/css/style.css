@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 .hero-heading {
     margin-bottom: -100px;
 }
@@ -21,6 +25,19 @@
 
 .circle.active {
     background-color: #a1a0a2;
+}
+
+@keyframes typing {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }    
+}
+
+.typing {
+    /* infinite typing animation */
+    animation: typing 500ms steps(40, end) infinite;
 }
 
 /* ------- Media Queries ------- */
