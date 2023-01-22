@@ -30,51 +30,65 @@
       id="nav"
       class="w-full bg-white fixed flex justify-between items-center flex-wrap shadow-sm px-7 py-5 z-10"
     >
-      <a href="#">
-        <span class="font-semibold text-3xl tracking-tight">MOOVERS</span>
-      </a>
-      <div id="mobile-menu" class="block">
-        <button
-          class="flex items-center px-3 py-2 border rounded text-gray-300 md:hidden"
-        >
-          <!-- Resource: Hamburger icon https://www.flaticon.com/free-icons/hamburger -->
-          <img src="/assets/img/menu.png" width="20" />
-        </button>
+      <div class="container flex justify-between items-center flex-wrap mx-auto">
+        <a href="#">
+          <!-- <span class="font-semibold text-3xl tracking-tight">MOOVERS</span> -->
+          <span class="text-4xl tracking-wide">
+            M<span
+              class="text-[#ff0080] tracking-wide"
+              >oo</span
+            >vers
+          </span>
+        </a>
+        <div id="mobile-menu" class="block">
+          <button
+            class="flex items-center px-3 py-2 border rounded text-gray-300 md:hidden"
+          >
+            <!-- Resource: Hamburger icon https://www.flaticon.com/free-icons/hamburger -->
+            <img src="/assets/img/menu.png" width="20" />
+          </button>
+        </div>
+        <ul id="nav-items" class="items-center text-base">
+          <!-- Resource: Icons https://fontawesome.com/ -->
+          <a href="#" class="menu-item px-3 py-3 md:hover:font-bold w-full">
+            <i class="fa-solid fa-house md:hidden mr-3"></i>
+            Home
+          </a>
+          <a href="#city-search" class="menu-item px-3 py-3 hover:font-bold w-full">
+            <i class="fa-sharp fa-solid fa-plane md:hidden mr-3"></i>
+            Search Flights
+          </a>
+          <a href="#reviews" class="menu-item px-3 py-3 hover:font-bold w-full">
+            <i class="fa-solid fa-circle-check md:hidden mr-3"></i>
+            Reviews
+          </a>
+          <a href="#about-us" class="menu-item px-3 py-3 hover:font-bold w-full">
+            <i class="fa-solid fa-circle-info md:hidden mr-3"></i>
+            About Us
+          </a>
+          <a
+            href="#"
+            id="myBtn"
+            class="menu-item px-3 py-3 hover:font-bold w-full"
+          >
+            <i class="fa-solid fa-circle-question md:hidden mr-3"></i>
+            How It Works
+          </a>
+        </ul>
       </div>
-      <ul id="nav-items" class="items-center text-base">
-        <!-- Resource: Icons https://fontawesome.com/ -->
-        <a href="#" class="menu-item px-3 py-3 md:hover:font-bold w-full">
-          <i class="fa-solid fa-house md:hidden mr-3"></i>
-          Home
-        </a>
-        <a href="#city-search" class="menu-item px-3 py-3 hover:font-bold w-full">
-          <i class="fa-sharp fa-solid fa-plane md:hidden mr-3"></i>
-          Search Flights
-        </a>
-        <a href="#about-us" class="menu-item px-3 py-3 hover:font-bold w-full">
-          <i class="fa-solid fa-circle-info md:hidden mr-3"></i>
-          About Us
-        </a>
-        <a
-          href="#"
-          id="myBtn"
-          class="menu-item px-3 py-3 hover:font-bold w-full"
-        >
-          <i class="fa-solid fa-circle-question md:hidden mr-3"></i>
-          How It Works
-        </a>
-      </ul>
+
     </nav>
-    <!-- Banner carousel -->
-    <div class="hero-heading pl-7 translate-y-48">
+    <!-- Hero text -->
+    <div class="hero-heading translate-y-48 mx-auto container pl-4">
       <h1 class="font-semibold text-white text-3xl md:text-5xl mb-11">
         Helping you <em>moove</em> <br />on a budget.
       </h1>
-      <a href="#city-search" class="bg-white rounded-md mt-6 text-lg px-3 py-5"
+      <a href="#city-search" class="bg-white rounded-md mt-6 text-lg px-3 py-5 font-bold"
         >Search Flights</a
       >
     </div>
-    <div id="carousel">
+    <!-- Banner carousel -->
+    <section id="carousel">
       <!-- Resource: Images from https://www.pexels.com/ -->
       <!-- Slide 1-->
       <div class="slides">
@@ -113,10 +127,11 @@
       <span
         class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"
       ></span>
-    </div>
+    </section>
 
     <!-- use tailwind to create search box -->
-    <section class="container mx-auto pt-5">
+    <section class="container mx-auto my-12 p-4">
+      <h2 class="text-2xl font-bold pl-4 mb-5">Search Flights</h2>
       <div
         id="animated-search-form"
         class="md:flex justify-between py-5 border-2 border-gray-300 rounded-lg p-4"
@@ -249,15 +264,16 @@
     <!-- Reviews section -->
 
     <section
-      class="justify-items-center review-cards mx-auto sm:text-left p-4 container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+      class="mb-12 bg-neutral-50 py-12"
+      id="reviews"
     >
+    <div class="container mx-auto justify-items-center review-cards sm:text-left p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
       <!-- Review header -->
       <article
-        class="review-header md:justify-self-start tile col-span-1 md:col-span-2 lg:col-span-3"
+        class="review-header md:justify-self-start tile col-span-1 md:col-span-2 lg:col-span-3 mb-5"
       >
-        <div class="py-2 ">
-          <h2 class="text-2xl font-bold">Customer Reviews</h2>
-        </div>
+        <h2 class="text-2xl font-bold">Customer Reviews</h2>
         <div
           class="leading-8 content-end grid grid-cols-1 md:grid-cols-[max-content_1fr]"
         >
@@ -278,7 +294,7 @@
       </article>
       <!-- Card 1 -->
       <article
-        class="review-card-container grid h-[350px] w-[275px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-500"
+        class="review-card-container grid h-[350px] w-[275px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-500 bg-white"
       >
         <div class="review-card">
           <div class="review-card-top grid grid-cols-2 p-3 place-items-center">
@@ -302,7 +318,7 @@
       </article>
       <!-- Card 2 -->
       <article
-        class="review-card-container grid h-[350px] w-[275px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-500"
+        class="review-card-container grid h-[350px] w-[275px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-500 bg-white"
       >
         <div class="review-card">
           <div class="review-card-top grid grid-cols-2 p-3 place-items-center">
@@ -329,7 +345,7 @@
       </article>
       <!-- Card 3 - Will be hidden on mobile and tablet view -->
       <article
-        class="review-card-container hidden lg:block h-[350px] w-[275px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-500"
+        class="review-card-container hidden lg:block h-[350px] w-[275px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-500 bg-white"
       >
         <div class="review-card">
           <div class="review-card-top grid grid-cols-2 p-3 place-items-center">
@@ -354,6 +370,7 @@
           </div>
         </div>
       </article>
+    </div>
     </section>
     <!-- Modal starts here -->
     <div
