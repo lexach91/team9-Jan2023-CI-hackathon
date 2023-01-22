@@ -73,7 +73,7 @@ const getPopularCities = async (origin, currency) => {
 // });
 $("#city-search").on("focus", (e) => {
     $('#form-left').removeClass('w-full');
-    $('#form-left').addClass('w-1/3');
+    $('#form-left').addClass('md:w-1/3');
     $('#currency').removeClass('hidden');
     $('#currency').removeClass('invisible');
     $('#currency').removeClass('w-0');
@@ -85,7 +85,7 @@ $("#city-search").on("focus", (e) => {
     // $('#max-price ~ svg').removeClass('hidden');
     $('#max-price ~ svg').removeClass('invisible');
     $('#form-right').removeClass('w-0');
-    $('#form-right').addClass('w-2/3');
+    $('#form-right').addClass('md:w-2/3');
     $('#form-right').removeClass('invisible');
     $('#form-right').removeClass('hidden');
     $('#search-button').removeClass('hidden');
@@ -110,7 +110,7 @@ $(document).on("click", (e) => {
     if (!$(e.target).closest("#animated-search-form").length && !$(e.target).closest("div[data-code]").length) {
         console.log("clicked outside");
         console.log(e.target);
-        $('#form-left').removeClass('w-1/3');
+        $('#form-left').removeClass('md:w-1/3');
         $('#form-left').addClass('w-full');
         $('#currency').removeClass('w-full');
         $('#currency').addClass('w-0');
@@ -121,7 +121,7 @@ $(document).on("click", (e) => {
         $('#max-price').addClass('invisible');
         $('#max-price').addClass('hidden');
         $('#max-price ~ svg').addClass('invisible');
-        $('#form-right').removeClass('w-2/3');
+        $('#form-right').removeClass('md:w-2/3');
         $('#form-right').addClass('w-0');
         $('#form-right').addClass('invisible');
         $('#form-right').addClass('hidden');
