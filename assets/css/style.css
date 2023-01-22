@@ -12,8 +12,26 @@
     height: 450px;
 }
 
-.about-background {
-    background: url('/assets/img/cow-seamless.jpg');
+#about-us {
+    overflow: hidden;
+    position: relative;
+}
+
+.about-bg {
+    opacity: 0.2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.about-content {
+    position: relative;
+}
+
+.about-content p {
+    border: 5px black;
 }
 
 /* ------- Media Queries ------- */
