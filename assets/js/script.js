@@ -71,3 +71,51 @@ window.onclick = function(event) {
 
 copywright.innerHTML=(year)
 
+// typewriter effect
+{/* <span class="text-[#ff0080] text-2xl font-bold" id="cursor"
+          >|</span>
+                  <span
+          id="txt-rotate"
+          data-period="2000"
+          data-rotate='[ "for your budget","for your next adventure", "for your soul" ]'
+        ></span> */}
+const txtElement = document.querySelector("#txt-rotate");
+const cursorElement = document.querySelector("#cursor");
+const words = JSON.parse(txtElement.getAttribute("data-rotate"));
+const period = txtElement.getAttribute("data-period");
+let txt = "";
+let wordIndex = 0;
+let isDeleting = false;
+let isEnd = false;
+const typeWriter = () => {
+  const fullTxt = words[wordIndex];
+
+  if (isDeleting) {
+    txt = fullTxt.substring(0, txt.length - 1);
+  } else {
+    txt = fullTxt.substring(0, txt.length + 1);
+  }
+
+  txtElement.innerHTML = `<span class="txt">${txt}</span>`;
+
+  let typeSpeed = 100;
+
+  if (isDeleting) {
+    typeSpeed /= 2;
+  }
+
+  if (!isDeleting && txt === fullTxt) {
+    typeSpeed = period;
+    isDeleting = true;
+  } else if (isDeleting && txt === "") {
+    isDeleting = false;
+    wordIndex++;
+    if (wordIndex === words.length) {
+      wordIndex = 0;
+    }
+  }
+
+  setTimeout(typeWriter, typeSpeed);
+};
+
+window.addEventListener("load", typeWriter);
