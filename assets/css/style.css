@@ -3,13 +3,41 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
 
-#hero {
-    background: url('/assets/img/hero-image-1.jpg') ;
-    background-position: center center;
+.hero-heading {
+    margin-bottom: -100px;
+}
+
+#carousel .slides img {
+    height: 500px;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 450px;
+    object-fit: cover;
+}
+
+.circle {
+    transition: background-color 0.6s ease;
+}
+
+.circle.active {
+    background-color: #a1a0a2;
+}
+
+@keyframes typing {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }    
+}
+
+.typing {
+    /* infinite typing animation */
+    animation: typing 500ms steps(40, end) infinite;
 }
 
 #about-us {
