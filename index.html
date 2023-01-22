@@ -131,7 +131,19 @@
 
     <!-- use tailwind to create search box -->
     <section id="search-section" class="container mx-auto my-12 p-4 bg-white rounded-lg py-12">
-      <h2 class="text-2xl font-bold mb-5">Search Flights</h2>
+      <h2 class="text-2xl font-bold mb-5">
+        Search Flights
+        <!-- typewriter effect -->
+        <span
+        id="txt-rotate"
+        class="text-[#ff0080] text-2xl font-bold"
+        data-period="2000"
+        data-rotate='[ "for your budget","for your next adventure", "for your soul" ]'
+        ></span>
+        <span class="typing text-[#ff0080] text-2xl font-bold ml-[-8px]" id="cursor"
+          >|</span>
+      </h2>
+      
       <div
         id="animated-search-form"
         class="md:flex justify-between py-5 border-2 border-[#ff0080]/75 rounded-lg p-4"
@@ -247,8 +259,8 @@
                   alt="placeholder"
                   class="w-10 h-10"
                 />
-                <p class="text-gray-400 pt-2">
-                  Search for a city to see flight prices
+                <p class="text-black pt-2">
+                  Choose an airport and a budget to start your search
                 </p>
               </div>
               <div
