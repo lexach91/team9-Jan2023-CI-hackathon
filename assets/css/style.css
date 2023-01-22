@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 .hero-heading {
     margin-bottom: -100px;
 }
