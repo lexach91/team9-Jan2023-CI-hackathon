@@ -72,13 +72,6 @@ window.onclick = function(event) {
 copywright.innerHTML=(year)
 
 // typewriter effect
-{/* <span class="text-[#ff0080] text-2xl font-bold" id="cursor"
-          >|</span>
-                  <span
-          id="txt-rotate"
-          data-period="2000"
-          data-rotate='[ "for your budget","for your next adventure", "for your soul" ]'
-        ></span> */}
 const txtElement = document.querySelector("#txt-rotate");
 const cursorElement = document.querySelector("#cursor");
 const words = JSON.parse(txtElement.getAttribute("data-rotate"));
