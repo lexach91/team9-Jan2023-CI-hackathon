@@ -54,7 +54,7 @@
             <i class="fa-solid fa-house md:hidden mr-3"></i>
             Home
           </a>
-          <a href="#city-search" class="menu-item px-3 py-3 hover:font-bold w-full">
+          <a href="#search-section" class="menu-item px-3 py-3 hover:font-bold w-full">
             <i class="fa-sharp fa-solid fa-plane md:hidden mr-3"></i>
             Search Flights
           </a>
@@ -83,7 +83,7 @@
       <h1 class="font-semibold text-white text-3xl md:text-5xl mb-11">
         Helping you <em>moove</em> <br />on a budget.
       </h1>
-      <a href="#city-search" class="bg-white rounded-md mt-6 text-lg px-3 py-5 font-bold"
+      <a href="#search-section" class="bg-white rounded-md mt-6 text-lg px-3 py-5 font-bold"
         >Search Flights</a
       >
     </div>
@@ -130,18 +130,18 @@
     </section>
 
     <!-- use tailwind to create search box -->
-    <section class="container mx-auto my-12 p-4">
+    <section id="search-section" class="container mx-auto my-12 p-4 bg-white rounded-lg py-12">
       <h2 class="text-2xl font-bold mb-5">Search Flights</h2>
       <div
         id="animated-search-form"
-        class="md:flex justify-between py-5 border-2 border-gray-300 rounded-lg p-4"
+        class="md:flex justify-between py-5 border-2 border-[#ff0080]/75 rounded-lg p-4"
       >
         <div id="form-left" class="w-full transition-all">
           <div class="relative mb-2">
             <input
               type="text"
               id="city-search"
-              class="w-full border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+              class="w-full border-2 border-[#ff0080]/50 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
               placeholder="Start typing your city or airport name"
             />
             <svg
@@ -188,7 +188,7 @@
               type="number"
               id="max-price"
               class="w-0 invisible hidden transition-all border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
-              placeholder="Max price"
+              placeholder="Your budget"
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -375,11 +375,11 @@
     <!-- Modal starts here -->
     <div
       id="myModal"
-      class="modal hidden fixed z-10 top-0 w-full h-full overflow-auto"
+      class="modal hidden fixed z-10 top-0 w-full h-full overflow-auto bg-black bg-opacity-70 transition-all flex justify-center items-center"
     >
       <!-- Modal content -->
       <div
-        class="modal-content bg-black text-white mx-auto mt-4 p-4 border w-3/4 sm:w-1/2"
+        class="modal-content bg-black text-white mx-auto mt-4 p-4 border w-3/4 sm:w-1/2 border-white rounded-lg"
       >
         <div>
           <span
