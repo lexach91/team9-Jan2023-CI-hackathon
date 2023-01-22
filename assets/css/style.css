@@ -53,7 +53,7 @@ html {
     top: 0;
     width: 100%;
     height: 100%;
-    background: url(assets/img/cow-seamless.jpg);
+    background: url(../img/cow-seamless.jpg);
     background-repeat: repeat;
     opacity: 0.4;
 }
