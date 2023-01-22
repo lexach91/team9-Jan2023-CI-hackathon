@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Moovers</title>
-    <link rel="icon" type="image/x-icon" href="./assets/img/cow.png">
-   <link rel="stylesheet" href="assets/css/output.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/cow.png" />
+    <link rel="stylesheet" href="assets/css/output.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- jQuery UI -->
@@ -26,14 +26,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <nav id="nav" class="w-full bg-white fixed flex justify-between items-center flex-wrap shadow-sm px-7 py-5 z-10">
-      <a href="#"> 
+    <nav
+      id="nav"
+      class="w-full bg-white fixed flex justify-between items-center flex-wrap shadow-sm px-7 py-5 z-10"
+    >
+      <a href="#">
         <span class="font-semibold text-3xl tracking-tight">MOOVERS</span>
       </a>
       <div id="mobile-menu" class="block">
-        <button class="flex items-center px-3 py-2 border rounded text-gray-300 md:hidden">
+        <button
+          class="flex items-center px-3 py-2 border rounded text-gray-300 md:hidden"
+        >
           <!-- Resource: Hamburger icon https://www.flaticon.com/free-icons/hamburger -->
-          <img src="/assets/img/menu.png" width="20">
+          <img src="/assets/img/menu.png" width="20" />
         </button>
       </div>
       <ul id="nav-items" class="items-center text-base">
@@ -50,7 +55,11 @@
           <i class="fa-solid fa-circle-info md:hidden mr-3"></i>
           About Us
         </a>
-        <a href="#" id="myBtn" class="menu-item px-3 py-3 hover:font-bold w-full">
+        <a
+          href="#"
+          id="myBtn"
+          class="menu-item px-3 py-3 hover:font-bold w-full"
+        >
           <i class="fa-solid fa-circle-question md:hidden mr-3"></i>
           How It Works
         </a>
@@ -58,84 +67,200 @@
     </nav>
     <!-- Banner carousel -->
     <div class="hero-heading pl-7 translate-y-48">
-      <h1 class="font-semibold text-white text-3xl md:text-5xl mb-11">Helping you <em>moove</em> <br>on a budget.</h1>
-      <a href="#search" class="bg-white rounded-md mt-6 text-lg px-3 py-5">Search Flights</a>
+      <h1 class="font-semibold text-white text-3xl md:text-5xl mb-11">
+        Helping you <em>moove</em> <br />on a budget.
+      </h1>
+      <a href="#search" class="bg-white rounded-md mt-6 text-lg px-3 py-5"
+        >Search Flights</a
+      >
     </div>
     <div id="carousel">
       <!-- Resource: Images from https://www.pexels.com/ -->
       <!-- Slide 1-->
       <div class="slides">
-        <img src="assets/img/hero-image-1.jpg" alt="Deep blue ocean with sunny blue skies" class="w-full" height=500>
+        <img
+          src="assets/img/hero-image-1.jpg"
+          alt="Deep blue ocean with sunny blue skies"
+          class="w-full"
+          height="500"
+        />
       </div>
       <!-- Slide 2 -->
       <div class="slides">
-        <img src="assets/img/hero-image-2.jpg" alt="Body of Water With People Rowring on Boat Beside Tall Building Venice" class="w-full">
+        <img
+          src="assets/img/hero-image-2.jpg"
+          alt="Body of Water With People Rowring on Boat Beside Tall Building Venice"
+          class="w-full"
+        />
       </div>
       <!-- Slide 3 -->
       <div class="slides">
-        <img src="assets/img/hero-image-3.jpg" alt="Brown rock formation of the sea" class="w-full">
+        <img
+          src="assets/img/hero-image-3.jpg"
+          alt="Brown rock formation of the sea"
+          class="w-full"
+        />
       </div>
     </div>
     <!-- Circle indicators -->
-    <div class="circle-indicators text-center -translate-y-10 ">
-      <span class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"></span>
-      <span class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"></span>
-      <span class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"></span>
+    <div class="circle-indicators text-center -translate-y-10">
+      <span
+        class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"
+      ></span>
+      <span
+        class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"
+      ></span>
+      <span
+        class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"
+      ></span>
     </div>
 
     <!-- use tailwind to create search box -->
-    <div
-      id="search-container"
-      class="flex justify-center items-center h-screen"
-    >
-      <div class="w-1/2">
-        <div class="relative">
-          <input
-            type="text"
-            id="search"
-            class="w-full border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
-            placeholder="Search"
-          />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-            style="
-              position: absolute;
-              top: 50%;
-              right: 0;
-              transform: translateY(-50%);
-              color: #a0aec0;
-              margin: 0 10px;
-            "
-          >
-            <path
-              id="search-icon"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+    <section class="container mx-auto pt-5">
+      <div
+        id="animated-search-form"
+        class="md:flex justify-between py-5 border-2 border-gray-300 rounded-lg p-4"
+      >
+        <div id="form-left" class="w-full transition-all">
+          <div class="relative mb-2">
+            <input
+              type="text"
+              id="city-search"
+              class="w-full border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+              placeholder="Start typing your city or airport name"
             />
-          </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+              style="
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                color: #a0aec0;
+                margin: 0 10px;
+              "
+            >
+              <path
+                id="search-icon"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+              />
+            </svg>
+
+            <div
+              id="city-search-dropdown"
+              class="absolute invisible top-0 left-0 w-full bg-white border-2 border-gray-300 rounded-lg mt-10 z-10 max-h-96 overflow-y-scroll overflow-x-hidden"
+            ></div>
+          </div>
+          <!-- select currency -->
+          <select
+            id="currency"
+            class="w-0 invisible hidden mb-2 transition-all border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+          >
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="GBP">GBP</option>
+          </select>
+          <!-- enter max price -->
+          <div class="relative mb-2">
+            <input
+              type="number"
+              id="max-price"
+              class="w-0 invisible hidden transition-all border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+              placeholder="Max price"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 invisible"
+              style="
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                color: #a0aec0;
+                margin: 0 10px;
+              "
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+          <!-- search button -->
+          <button
+            id="search-button"
+            disabled
+            class="w-0 invisible hidden transition-all border-2 border-gray-300 bg-gray-200 h-10 px-5 rounded-lg text-sm focus:outline-none disabled:hover:cursor-not-allowed mb-5 md:mb-1"
+          >
+            Search
+          </button>
+          <button
+            id="reset-search"
+            class="w-0 invisible hidden transition-all border-2 border-gray-300 bg-gray-100 h-10 px-5 rounded-lg text-sm focus:outline-none disabled:hover:cursor-not-allowed mb-5 md:mb-1"
+          >
+            Reset
+          </button>
+        </div>
+        <div
+          id="form-right"
+          class="w-0 invisible hidden transition-all flex justify-center items-center px-5"
+        >
+          <!-- flight search results will go here -->
+          <div
+            id="flight-search-results"
+            class="flex flex-col justify-center items-center h-full w-full"
+          >
+            <div class="flex justify-center items-center w-full">
+              <div
+                id="results-placeholder"
+                class="flex flex-col justify-center items-center w-full"
+              >
+                <img
+                  src="assets/media/cow-face.png"
+                  alt="placeholder"
+                  class="w-10 h-10"
+                />
+                <p class="text-gray-400 pt-2">
+                  Search for a city to see flight prices
+                </p>
+              </div>
+              <div
+                id="results"
+                class="flex flex-col items-center h-full hidden max-h-96 overflow-y-scroll w-full"
+              ></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
+    </section>
     <!-- Modal starts here -->
-    <!-- <button id="myBtn">Modal</button> -->
-
     <div
       id="myModal"
       class="modal hidden fixed z-10 top-0 w-full h-full overflow-auto"
     >
       <!-- Modal content -->
-      <div class="modal-content bg-black text-white mx-auto mt-4 p-4 border w-3/4 sm:w-1/2">
+      <div
+        class="modal-content bg-black text-white mx-auto mt-4 p-4 border w-3/4 sm:w-1/2"
+      >
         <div>
-          <span class="close float-right text-xl cursor-pointer hover:text-red-500">&times;</span>
+          <span
+            class="close float-right text-xl cursor-pointer hover:text-red-500"
+            >&times;</span
+          >
           <p class="pb-2 border-b-[1px] border-red-500">How it works</p>
-          <br/>
+          <br />
         </div>
         <div>
           <div class="flex py-2">
@@ -159,7 +284,7 @@
     </div>
     <!--end of modal  -->
     <footer class="text-center h-full">
-      <div class="inset-x-0 bottom-0 bg-black text-white">
+      <div class="absolute inset-x-0 bottom-0 bg-black text-white">
         <p class="p-4 tracking-wide">
           &copy;<span id="copywright" class=""></span> M<span
             class="text-[#ff0080] tracking-wide"
@@ -173,5 +298,6 @@
     <!-- jQuery UI -->
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/api2.js"></script>
   </body>
 </html>
