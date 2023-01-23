@@ -34,49 +34,44 @@
       class="w-full bg-white fixed flex justify-between items-center flex-wrap shadow-sm px-7 md:px-2 py-5 z-10"
     >
       <div class="container flex justify-between items-center flex-wrap mx-auto">
-        <a href="#">
-          <span class="text-4xl tracking-wide">
-            M<span
-              class="text-[#ff0080] tracking-wide"
-              >oo</span
-            >vers
-          </span>
+        <a href="index.html">
+          <img src="./assets/img/logo-1.png" width="140" alt="logo">
         </a>
         <div id="mobile-menu" class="block">
           <button
             class="flex items-center px-3 py-2 border rounded text-gray-300 md:hidden"
           >
             <!-- Resource: Hamburger icon https://www.flaticon.com/free-icons/hamburger -->
-            <img src="/assets/img/menu.png" width="20" />
+            <img src="./assets/img/menu.png" width="20" alt="menu button"/>
           </button>
         </div>
         <ul id="nav-items" class="items-center text-base">
           <!-- Resource: Icons https://fontawesome.com/ -->
-          <a href="#" class="menu-item px-1 py-3 md:hover:font-bold w-full">
-            <i class="fa-solid fa-house md:hidden mr-3"></i>
+          <a href="#" class="menu-item px-1 py-3 w-full hover:text-[#ff0080]">
+            <i class="fa-solid fa-house md:hidden mr-3 text-[#ff0080]"></i>
             Home
           </a>
 
 
-          <a href="#search-section" class="menu-item px-1 py-3 hover:font-bold w-full">
+          <a href="#search-section" class="menu-item px-1 py-3 w-full hover:text-[#ff0080]">
 
-            <i class="fa-sharp fa-solid fa-plane md:hidden mr-3"></i>
+            <i class="fa-sharp fa-solid fa-plane md:hidden mr-3 text-[#ff0080]"></i>
             Search Flights
           </a>
-          <a href="#reviews" class="menu-item px-1 py-3 hover:font-bold w-full">
-            <i class="fa-solid fa-circle-check md:hidden mr-3"></i>
-            Reviews
-          </a>
-          <a href="#about-us" class="menu-item px-1 py-3 hover:font-bold w-full">
-            <i class="fa-solid fa-circle-info md:hidden mr-3"></i>
+          <a href="#about-us" class="menu-item px-1 py-3 w-full hover:text-[#ff0080]">
+            <i class="fa-solid fa-circle-info md:hidden mr-3 text-[#ff0080]"></i>
             About Us
+          </a>
+          <a href="#reviews" class="menu-item px-1 py-3 w-full hover:text-[#ff0080]">
+            <i class="fa-solid fa-circle-check md:hidden mr-3 text-[#ff0080]"></i>
+            Reviews
           </a>
           <a
             href="#"
             id="myBtn"
-            class="menu-item px-1 py-1 hover:font-bold w-full"
+            class="menu-item px-1 py-1 w-full hover:text-[#ff0080]"
           >
-            <i class="fa-solid fa-circle-question md:hidden mr-3"></i>
+            <i class="fa-solid fa-circle-question md:hidden mr-3 text-[#ff0080]"></i>
             How It Works
           </a>
         </ul>
@@ -86,7 +81,7 @@
     <!-- Hero text -->
     <div class="hero-heading translate-y-48 mx-auto container pl-4">
       <h1 class="font-semibold text-white text-3xl md:text-5xl mb-11">
-        Helping you <em>moove</em> <br />on a budget.
+        Helping you <em>m<span class="text-[#ff0080]">oo</span>ve</em> <br />on a budget.
       </h1>
       <a href="#search-section" class="bg-white rounded-md mt-6 text-lg px-3 py-5 font-bold"
         >Search Flights</a
@@ -277,9 +272,8 @@
         </div>
       </div>
     </section>
-
-
     </div>
+    <!-- About us section -->
     <section id="about-us" class="px-[7%] h-auto">
       <div class="about-bg"></div>
       <div class="about-content">
@@ -292,6 +286,7 @@
       </div>
     </section>
 
+    <!-- Reviews section -->
 
     <section
       class="mb-12 bg-neutral-50 py-12"
@@ -442,13 +437,55 @@
       </div>
     </div>
     <!--end of modal  -->
-    <footer class="text-center h-full">
-      <div class="sticky inset-x-0 bottom-0 bg-black text-white">
-        <p class="p-4 tracking-wide">
-          &copy;<span id="copywright" class=""></span> M<span
-            class="text-[#ff0080] tracking-wide"
-            >oo</span
-          >vers
+    <!-- footer -->
+    <footer class="text-center h-full bg-gray-50 border-t border-black">
+      <div class="sticky inset-x-0 bottom-0">
+        <!-- github accounts container -->
+          <div class="flex justify-around px-2 md:px-7 pt-2">
+            <div>
+              <div>
+                <a href="https://github.com/JessicaJuliet" target="_blank" class="text-lg md:text-2xl" aria-label="Jess' github account">
+                  <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
+                </a>
+                <p>Jess</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <a href="https://github.com/Ant2210" target="_blank" class="text-lg md:text-2xl" aria-label="Ant's github account">
+                  <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
+                </a>
+                <p>Ant</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <a href="https://github.com/lexach91" target="_blank" class="text-lg md:text-2xl" aria-label="Aleksei's github account">
+                  <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
+                </a>
+                <p>Aleksei</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <a href="https://github.com/PVieira04" target="_blank" class="text-lg md:text-2xl" aria-label="Patrick's github account">
+                  <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
+                </a>
+                <p>Patrick</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <a href="https://github.com/StefanMdvs" target="_blank" class="text-lg md:text-2xl" aria-label="Stefan's github account">
+                  <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
+                </a>
+                <p>Stefan</p>
+              </div>
+            </div>
+          </div>
+        <!-- logo -->
+        <p class="p-4 tracking-wide text-center">
+          <img class="mx-auto" src="./assets/img/logo-transparent.png" width="140" alt="Logo image">
         </p>
       </div>
     </footer>
