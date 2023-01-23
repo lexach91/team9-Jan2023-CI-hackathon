@@ -193,7 +193,6 @@ $("#city-search").on("input", (e) => {
     $("#city-search-dropdown > div").on("click", (e) => {
       const airportCode =
         $(e.target).closest("div").data("code") || $(e.target).data("code");
-      console.log(airportCode);
       $("#city-search-dropdown").empty();
       $("#city-search-dropdown").addClass("invisible");
       $("#city-search").val(airportCode);
@@ -258,6 +257,7 @@ $("#search-button").on("click", (e) => {
         .toLocaleString()
         .slice(0, -3);
       const transfers = flight.transfers;
+      const flightNumber = `${flight.airline}${flight.flight_number}`
       const flightOption = `
             <div class="flex flex-col items-center justify-center w-full p-4 border border-gray-200 rounded-md">
                 <div class="flex items-center justify-between w-full">
@@ -276,13 +276,22 @@ $("#search-button").on("click", (e) => {
                         <span class="text-gray-500 text-sm">${transfers} transfers</span>
                     </div>
                     <div class="flex flex-col">
-                        <button class="px-4 py-2 font-bold text-white bg-blue-200 rounded-md">Book</button>
+                        <button class="px-4 py-2 font-bold text-white bg-blue-400 rounded-md hover:bg-pink-400" data-flight=${flightNumber}>Info</button>
                     </div>
                 </div>
             </div>`;
       $("#results-placeholder").hide();
       $("#results").removeClass("hidden");
       $("#results").append(flightOption);
+
+      $(`button[data-flight=${flightNumber}]`).on("click", (e) => {
+        // open flight info in new tab
+        window.open(
+          // https://www.flightstats.com/v2/flight-tracker/AA/4323
+          `https://www.flightstats.com/v2/flight-tracker/${flight.airline}/${flight.flight_number}`,
+        );
+        
+      });
 
       // $('#flight-search-results').addClass('overflow-y-scroll');
       // $('#flight-search-results').removeClass('justify-center');
