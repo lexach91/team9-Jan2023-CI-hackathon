@@ -44,7 +44,6 @@ function showCarousel() {
 
 showCarousel();
 
-let copywright = document.getElementById("copywright");
 let year = new Date().getFullYear();
 const modal = document.getElementById("myModal");
 // button that opens the modal
@@ -68,7 +67,6 @@ window.onclick = function (event) {
   }
 };
 
-copywright.innerHTML = year;
 
 // typewriter effect
 const txtElement = document.querySelector("#txt-rotate");
