@@ -40,19 +40,15 @@ In an idea scenario, the user would be able to use the link to book the flight d
 ​
 ## Technology:
 ​
-<< Detail your techstack here, and why you chose it. >>
+### Languages
+	- HTML5 - Latest version of HTML. Allows us to put content on the page.
+	- CSS3 - Latest version of CSS. Allows for custom styling.
+	- JavaScript - Used to manage APIs and code the search box.
 ​
-<< list your languages & tools below: >>
-​
-*  << languages >>
-	* << list the langauge & reason for using it >>
-​
-* << tools >>
-  * << list the tool & reason for using it >>
+### Tools
+	- TailwindCSS - Allows for fast inline styling in HTML 
 ​
 ## Initial MVP idea:
-​
-Detail plans and scope of project here....
 ​
 As a team we had a call on Slack to descide on the scope of the project. We decided that we wanted to have a static page with anchors to make it simple to use.
 We would have a navigation bar with the site logo and anchors, landing image with a call to action button, search flights section, about section, reviews, and the footer.
