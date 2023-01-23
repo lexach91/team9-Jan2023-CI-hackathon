@@ -1,53 +1,142 @@
 # MOOVERS
+​
+## Team Name: The Moovers
+​
+[Link to Deployed Project](<<add_deployed_link_to_project_here>>)
+​
+## Contents(#contents)
+​
+* [User Experience (UX)](#user-experience)
+  * [User Stories](#user-stories)
+* [Technology](#technology)
+* [Design](#design)
+  * [Color Scheme](#color-scheme)
+  * [Typography](#typography)
+  * [Imagery](#imagery)
+  * [Wireframes](#wireframes)
+* [Deployment & Usage](#deployment)
+* [Testing](#testing)
+* [Credits](#credits)
+  * [Code](#code)
+  * [Content](#content)
+  * [Media](#media)
+  * [Acknowledgements](#acknowledgements)
+​
+## User Experience
 MOOVERS is a site dedicated to those of us who love travelling, but for less! With everything going on in the world, 2023 is going to be a tough financial year... but with our application, you will still be able to go on holiday, save money, and have fun!
 
-Simply enter your variables like dates, number of holiday makers or max budget, and our tried-and-tested platform will give you the best prices. Click on the link, book your holiday, and you're set!
+The site has an ideal user - someone who loves to travel for the cheapest prices. With this in mind, everthing on the site is catered primarily towards that kind of user.
+The search function is straight-forward with only three options to choose from and the results section gives a link to the flight information.
+​
+### User Stories
+I expect a user's story to be something like the following. A friend told this user about the website and started having a look on their phone.
+The first thing they see is the hero image and then the call-to-action button reading "search flights".
+Upon clicking on that, the site scrolls down to the next section, allowing the user to type in their home airport.
+This user, living in London, types in LHR for London Heathrow. They then fill out their currency as GBP with a budget of £200.
+The first result(and so, cheapest holiday) is MAD for Madrid but this user has already recently been, so is more interested in the second result...
+KRK - Krakow, Poland. The user has never been before so they can click on the flight information button below the price and find out more.
 
+In an idea scenario, the user would be able to use the link to book the flight directly but we found we could not do this with free APIs.
+​
+## Technology:
+​
+<< Detail your techstack here, and why you chose it. >>
+​
+<< list your languages & tools below: >>
+​
+*  << languages >>
+	* << list the langauge & reason for using it >>
+​
+* << tools >>
+  * << list the tool & reason for using it >>
+​
+## Initial MVP idea:
+​
+Detail plans and scope of project here....
+​
+As a team we had a call on Slack to descide on the scope of the project. We decided that we wanted to have a static page with anchors to make it simple to use.
+We would have a navigation bar with the site logo and anchors, landing image with a call to action button, search flights section, about section, reviews, and the footer.
+The basic concept would be that we would provide the user with the cheapest flights based on the information they provided to us.
+Initially it was up in the air as to what information we would request because it would depend on what we could do with the APIs we could find...
+but the most important would be where they are flying from.
+The initial scope concluded with the user being able to click on a link to an external site and book their holiday.
+​
+### Actual idea & content:
+​
+The final product is very close in comparison to the initial scope. The one limitation we had was due to the use of free APIs which did not provide enough information
+for us to create the link for the user to book their holiday.
 
-## Features
-
-### Existing Features
-
+In addition, the ID provided by the free API is not unique, and so the user will be shown information about the earlist flight with the same ID.
+This is not ideal and we could have perhaps changed the concept but by the time we realised, the project was coming to a close and so it was too late to change.
+​
 - Navigation Bar
-	- Featured on all three pages of the site, this is a fully responsive navigation bar which includes the logo and anchors to the site's "Home", "Search" and "About" sections.
+	- This is a fully responsive navigation bar which includes the logo and anchors to the site's "Home", "Search Flights", "About Us", and "Reviews" sections.
 	- The "How it Works" item will create a popup on on your screen providing information on how exactly the site works.
-	- Users will be able to use these links to navigate to any page on the site without having to use the browser's back button.
+	- Users will be able to use these anchors to navigate to any section on the site.
 
 - Hero Image
 	- This includes an emotive image with enticing text: "Helping you moove on a budget".
 	- A call-to-action button is also featured as an anchor to the "Holiday Search" section.
+	- The image also changes between 3 different images.
 
 - Holiday Search Section
-	- This section is split into three parts.
-	- The left hand side will take up 1/3rd of the screen and includes form asking the user travel details, and a calendar which is fully interactable with the user. They will be able to select a start date and a return date. Users will not be able to search for one-way journeys as it does not fit the purpose of the site. Once selecting both dates, the user will be able to click on the "Search" button.
-	- The right hand side will take up 2/3rds of the screen and initially have an image here.
-	- Upon the user selecting "Search", the right hand side will instead display search results.
-
-- Review Section
+	- This section initially takes up the full width of the page. Once the user's home airport is selected, this section changes.
+	- This section is now split into two parts.
+	- The left hand side will take up 1/3rd of the screen. It will still display the user's home airport but also expand in height to show inputs for currency and budget.
+	- Once entered, the user will be able to click on the "Search" button.
+	- The right hand side (which takes up 2/3rds of the width of the screen) will then display the results.
 
 - About Us
+	- This section tells the user a little bit about the purpose of the website.
+	- The styling of both the title of the section (whoo we are) and the background are a play on the website's theme and reiterate the playfulness fo the site.
+	- This section also talks a bit about who the site's ideal user is.
+
+- Review Section
+	- This section is split into three parts. Left, middle and right sections each feature a different review.
+	- On smaller sized screens only two are featured, and on even smaller screens, two are featured with one appearing on top of the other.
+	- On hover, the reviews pop out a little bit with the site's signature pink shadow, giving interactability to the user.
 
 - Footer
-
-
-### Features Left to Implement
-
-
+	- This section features working github links for all team members
+	- Also features the site's logo at the bottom.
+​
+## Design
+​
+### Color Scheme:
+Keeping in congruent with the "cow" theme, we decided to go for a black and white theme with scattered hints of pink alluding to a cow's nose.
+​
+### Typography:
+<< what font pairings did your team consider and pick? And why? >>
+​
+### Imagery:
+Being a travel website, we primarily used emotive imagery of beautiful landscapes - all places our user could end up visiting.
+​
+### Wireframes:
+​
+Please refer to [moovers-wireframes.pdf](https://lexach91.github.io/team9-Jan2023-CI-hackathon/documentation/wireframes/moovers-wireframes.pdf)
+​
+## Deployment
+<< detail deployment methods used here, and any extraneous circumstances to run the project locally >>
+​
 ## Testing
 
 Please refer to the [TESTING.md](TESTING.md) file for details on testing.
-
-## Wireframes
-
-Please refer to [moovers-wireframes.pdf](https://lexach91.github.io/team9-Jan2023-CI-hackathon/documentation/wireframes/moovers-wireframes.pdf)
-
-## Deployment
-
-
+​
 ## Credits
-
+​
+### Code
+All code is original.
+​
+### APIs
+API used to get flight data: https://rapidapi.com/Travelpayouts/api/flight-data/
+API used to get airport by city: https://developers.amadeus.com/
 
 ### Content
-
-
+All content is original.
+​
 ### Media
+The images were sourced from pexels.com
+The about background was sourced from vectorstock.com
+​
+### Acknowledgements
+Thank you to http://www.flightstats.com/ for providing flight information.
