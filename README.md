@@ -4,7 +4,7 @@
 ​
 The website can be accessed by this [link](https://lexach91.github.io/team9-Jan2023-CI-hackathon/)
 ​
-## Contents(#contents)
+## [Contents](#contents)
 ​
 * [User Experience (UX)](#user-experience)
   * [User Stories](#user-stories)
