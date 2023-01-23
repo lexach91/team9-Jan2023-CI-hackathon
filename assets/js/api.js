@@ -66,24 +66,17 @@ const getPopularCities = async (origin, currency) => {
       {
         method: "GET",
         headers: headers,
-        // params: params,
       }
     );
     const data = await response.json();
-    // sort data by price
-    // data.sort((a, b) => {
-    //     return a.price - b.price;
-    // });
+
     const popularCities = data.data;
-    // popularCities.sort((a, b) => {
-    //     return a.price - b.price;
-    // });
+
     return popularCities;
   } catch (error) {
     console.log(error);
   }
 };
-
 
 $("#city-search").on("focus", (e) => {
   $("#form-left").removeClass("w-full");
@@ -96,7 +89,6 @@ $("#city-search").on("focus", (e) => {
   $("#max-price").removeClass("invisible");
   $("#max-price").removeClass("w-0");
   $("#max-price").addClass("w-full");
-  // $('#max-price ~ svg').removeClass('hidden');
   $("#max-price ~ svg").removeClass("invisible");
   $("#form-right").removeClass("w-0");
   $("#form-right").addClass("md:w-2/3");
@@ -108,23 +100,12 @@ $("#city-search").on("focus", (e) => {
   $("#search-button").addClass("w-full");
 });
 
-// $("#city-search").on("blur", (e) => {
-//     $('#form-left').removeClass('w-1/3');
-//     $('#form-left').addClass('w-full');
-//     $('#currency').removeClass('w-full');
-//     $('#currency').addClass('w-0');
-//     $('#currency').addClass('invisible');
-//     $('#form-right').removeClass('w-2/3');
-//     $('#form-right').addClass('w-0');
-//     $('#form-right').addClass('invisible');
-// });
-
 $(document).on("click", (e) => {
   // if e.target is not an any child of #animated-search-form or #city-search-dropdown
   if (
     !$(e.target).closest("#animated-search-form").length &&
     !$(e.target).closest("div[data-code]").length
-  ) {    
+  ) {
     $("#form-left").removeClass("md:w-1/3");
     $("#form-left").addClass("w-full");
     $("#currency").removeClass("w-full");
@@ -147,7 +128,6 @@ $(document).on("click", (e) => {
   }
 });
 
-
 let searchingAirports = false;
 $("#city-search").on("input", (e) => {
   const query = e.target.value;
@@ -160,26 +140,27 @@ $("#city-search").on("input", (e) => {
     return;
   }
   searchingAirports = true;
-  getNearbyAirports(query).then((data) => {
-    if (data.length === 0) {
-      $("#city-search-dropdown").empty();
-      $("#city-search-dropdown").removeClass("invisible");
-      const airportOption = `
+  getNearbyAirports(query)
+    .then((data) => {
+      if (data.length === 0) {
+        $("#city-search-dropdown").empty();
+        $("#city-search-dropdown").removeClass("invisible");
+        const airportOption = `
           <div class="flex items-center justify-between px-4 py-2 cursor-pointer hover:bg-gray-200">
               <div class="flex flex-col">
                   <span class="font-bold">No airports found</span>
               </div>
           </div>`;
-      $("#city-search-dropdown").append(airportOption);
-      return;
-    }
-    $("#city-search-dropdown").empty();
-    data.forEach((airport) => {
-      const airportName = airport.name;
-      const airportCode = airport.iataCode;
-      const airportCity = airport.address.cityName;
-      const airportCountry = airport.address.countryCode;
-      const airportOption = `
+        $("#city-search-dropdown").append(airportOption);
+        return;
+      }
+      $("#city-search-dropdown").empty();
+      data.forEach((airport) => {
+        const airportName = airport.name;
+        const airportCode = airport.iataCode;
+        const airportCity = airport.address.cityName;
+        const airportCountry = airport.address.countryCode;
+        const airportOption = `
             <div class="flex items-center justify-between px-4 py-2 cursor-pointer hover:bg-gray-200" data-code="${airportCode}">
                 <div class="flex flex-col" data-code="${airportCode}">
                     <span class="font-bold">${airportName}</span>
@@ -187,22 +168,23 @@ $("#city-search").on("input", (e) => {
                     <span class="font-bold text-sm">${airportCode}</span>
                 </div>
             </div>`;
-      $("#city-search-dropdown").append(airportOption);
-    });
-    $("#city-search-dropdown").removeClass("invisible");
-    $("#city-search-dropdown > div").on("click", (e) => {
-      const airportCode =
-        $(e.target).closest("div").data("code") || $(e.target).data("code");
-      $("#city-search-dropdown").empty();
-      $("#city-search-dropdown").addClass("invisible");
-      $("#city-search").val(airportCode);
-      // make search button enabled
-      $("#search-button").attr("disabled", false);
-      $("#search-button").removeClass("bg-gray-200");
-      $("#search-button").addClass("bg-blue-200");
-    });
-  }).catch((err) => {
-        console.log(err);        
+        $("#city-search-dropdown").append(airportOption);
+      });
+      $("#city-search-dropdown").removeClass("invisible");
+      $("#city-search-dropdown > div").on("click", (e) => {
+        const airportCode =
+          $(e.target).closest("div").data("code") || $(e.target).data("code");
+        $("#city-search-dropdown").empty();
+        $("#city-search-dropdown").addClass("invisible");
+        $("#city-search").val(airportCode);
+        // make search button enabled
+        $("#search-button").attr("disabled", false);
+        $("#search-button").removeClass("bg-gray-200");
+        $("#search-button").addClass("bg-blue-200");
+      });
+    })
+    .catch((err) => {
+      console.log(err);
     });
   searchingAirports = false;
 });
@@ -215,8 +197,9 @@ $("#search-button").on("click", (e) => {
   const airportCode = $("#city-search").val();
   const chosenCurrency = $("#currency").val();
   const maxPrice = $("#max-price").val();
-  getPopularCities(airportCode, chosenCurrency).then((data) => {
-    if (data.length === 0) {
+  getPopularCities(airportCode, chosenCurrency)
+    .then((data) => {
+      if (data.length === 0) {
         $("#results-placeholder").hide();
         $("#results").removeClass("hidden");
         $("#results").empty();
@@ -228,37 +211,36 @@ $("#search-button").on("click", (e) => {
                 </div>`;
         $("#results").append(noResults);
         return;
-    }
-    $("#results").empty();
-    // $('results').removeClass('hidden');
-    let results = Object.values(data);
-    if (maxPrice) {
-      results = results.filter((flight) => {
-        return flight.price <= maxPrice;
+      }
+      $("#results").empty();
+      let results = Object.values(data);
+      if (maxPrice) {
+        results = results.filter((flight) => {
+          return flight.price <= maxPrice;
+        });
+      }
+      results.sort((a, b) => {
+        return a.price - b.price;
       });
-    }
-    results.sort((a, b) => {
-      return a.price - b.price;
-    });
-    if (results.length === 0) {
+      if (results.length === 0) {
         $("#results-placeholder img").removeClass("animate-bounce");
         $("#results-placeholder p").show();
         $("#results-placeholder p").text("So sorry, no results found.");
-        return;        
-    }
-    results.forEach((flight) => {
-      const origin = flight.origin;
-      const destination = flight.destination;
-      const price = flight.price;
-      const departure_at = new Date(flight.departure_at)
-        .toLocaleString()
-        .slice(0, -3);
-      const return_at = new Date(flight.return_at)
-        .toLocaleString()
-        .slice(0, -3);
-      const transfers = flight.transfers;
-      const flightNumber = `${flight.airline}${flight.flight_number}`
-      const flightOption = `
+        return;
+      }
+      results.forEach((flight) => {
+        const origin = flight.origin;
+        const destination = flight.destination;
+        const price = flight.price;
+        const departure_at = new Date(flight.departure_at)
+          .toLocaleString()
+          .slice(0, -3);
+        const return_at = new Date(flight.return_at)
+          .toLocaleString()
+          .slice(0, -3);
+        const transfers = flight.transfers;
+        const flightNumber = `${flight.airline}${flight.flight_number}`;
+        const flightOption = `
             <div class="flex flex-col items-center justify-center w-full p-4 border border-gray-200 rounded-md">
                 <div class="flex items-center justify-between w-full">
                     <div class="flex flex-col">
@@ -280,27 +262,24 @@ $("#search-button").on("click", (e) => {
                     </div>
                 </div>
             </div>`;
-      $("#results-placeholder").hide();
-      $("#results").removeClass("hidden");
-      $("#results").append(flightOption);
+        $("#results-placeholder").hide();
+        $("#results").removeClass("hidden");
+        $("#results").append(flightOption);
 
-      $(`button[data-flight=${flightNumber}]`).on("click", (e) => {
-        // open flight info in new tab
-        window.open(
-          // https://www.flightstats.com/v2/flight-tracker/AA/4323
-          `https://www.flightstats.com/v2/flight-tracker/${flight.airline}/${flight.flight_number}`,
-        );
-        
+        $(`button[data-flight=${flightNumber}]`).on("click", (e) => {
+          // open flight info in new tab
+          window.open(
+            `https://www.flightstats.com/v2/flight-tracker/${flight.airline}/${flight.flight_number}`,
+            "_blank"
+          );
+        });
       });
-
-      // $('#flight-search-results').addClass('overflow-y-scroll');
-      // $('#flight-search-results').removeClass('justify-center');
+    })
+    .catch((err) => {
+      console.log(err);
+      $("#results-placeholder").show();
+      $("#results-placeholder img").removeClass("animate-bounce");
+      $("#results-placeholder p").show();
+      $("#results-placeholder p").text("So sorry, no results found.");
     });
-  }).catch((err) => {
-        console.log(err);
-        $("#results-placeholder").show();
-        $("#results-placeholder img").removeClass("animate-bounce");
-        $("#results-placeholder p").show();
-        $("#results-placeholder p").text("So sorry, no results found.");
-  });
 });
