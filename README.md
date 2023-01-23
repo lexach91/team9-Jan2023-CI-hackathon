@@ -35,15 +35,8 @@ Simply enter your variables like dates, number of holiday makers or max budget, 
 
 ## Testing
 
+Please refer to the [TESTING.md](TESTING.md) file for details on testing.
 
-### Validator Testing
-
-- HTML
-	- 
-- CSS
-	- 
-
-### Unfixed Bugs
 
 
 ## Deployment
