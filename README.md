@@ -44,9 +44,11 @@ In an idea scenario, the user would be able to use the link to book the flight d
 	- HTML5 - Latest version of HTML. Allows us to put content on the page.
 	- CSS3 - Latest version of CSS. Allows for custom styling.
 	- JavaScript - Used to manage APIs and code the search box.
+	- jQuery - Used for better use of selectors in the api.js file.
 ​
 ### Tools
-	- TailwindCSS - Allows for fast inline styling in HTML 
+	- TailwindCSS - Allows for fast inline styling in HTML.
+	- Jest - Used to test the site.
 ​
 ## Initial MVP idea:
 ​
@@ -102,7 +104,7 @@ This is not ideal and we could have perhaps changed the concept but by the time 
 Keeping in congruent with the "cow" theme, we decided to go for a black and white theme with scattered hints of pink alluding to a cow's nose.
 ​
 ### Typography:
-<< what font pairings did your team consider and pick? And why? >>
+Happy with Tailwind CSS typography styles.
 ​
 ### Imagery:
 Being a travel website, we primarily used emotive imagery of beautiful landscapes - all places our user could end up visiting.
@@ -112,7 +114,25 @@ Being a travel website, we primarily used emotive imagery of beautiful landscape
 Please refer to [moovers-wireframes.pdf](https://lexach91.github.io/team9-Jan2023-CI-hackathon/documentation/wireframes/moovers-wireframes.pdf)
 ​
 ## Deployment
-<< detail deployment methods used here, and any extraneous circumstances to run the project locally >>
+The Website was deployed to GitHub pages.
+
+The steps to deploy:
+
+Open the Website's GitHub repository
+Click on the "settings" tab in the upper right corner
+In the left sidebar menu, click on the "Pages" button
+Choose the branch that needs to be deployed
+Click the "save" button
+
+
+To clone the repository to your local machine copy the command bellow and paste it to your terminal:
+
+git clone https://github.com/lexach91/team9-Jan2023-CI-hackathon.git
+To open the repository in Gitpod:
+
+If you have Gitpod extension installed in your browser, press the green button which reads GitPod.
+
+If you don't have Gitpod extension installed in your browser, click this link: https://gitpod.io/#https://github.com/lexach91/team9-Jan2023-CI-hackathon
 ​
 ## Testing
 
@@ -133,6 +153,7 @@ All content is original.
 ### Media
 The images were sourced from pexels.com
 The about background was sourced from vectorstock.com
+The icon was created by sourcing an image from clker.com
 ​
 ### Acknowledgements
 Thank you to http://www.flightstats.com/ for providing flight information.
