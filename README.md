@@ -37,7 +37,9 @@ Simply enter your variables like dates, number of holiday makers or max budget, 
 
 Please refer to the [TESTING.md](TESTING.md) file for details on testing.
 
+## Wireframes
 
+Please refer to [moovers-wireframes.pdf](https://lexach91.github.io/team9-Jan2023-CI-hackathon/documentation/wireframes/moovers-wireframes.pdf)
 
 ## Deployment
 
