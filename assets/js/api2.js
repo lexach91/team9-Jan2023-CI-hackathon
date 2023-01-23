@@ -193,7 +193,6 @@ $("#city-search").on("input", (e) => {
     $("#city-search-dropdown > div").on("click", (e) => {
       const airportCode =
         $(e.target).closest("div").data("code") || $(e.target).data("code");
-      console.log(airportCode);
       $("#city-search-dropdown").empty();
       $("#city-search-dropdown").addClass("invisible");
       $("#city-search").val(airportCode);
@@ -248,7 +247,6 @@ $("#search-button").on("click", (e) => {
         return;        
     }
     results.forEach((flight) => {
-      console.log(flight);
       const origin = flight.origin;
       const destination = flight.destination;
       const price = flight.price;
@@ -260,7 +258,6 @@ $("#search-button").on("click", (e) => {
         .slice(0, -3);
       const transfers = flight.transfers;
       const flightNumber = `${flight.airline}${flight.flight_number}`
-      // console.log(flightNumber);
       const flightOption = `
             <div class="flex flex-col items-center justify-center w-full p-4 border border-gray-200 rounded-md">
                 <div class="flex items-center justify-between w-full">
