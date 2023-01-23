@@ -2,7 +2,7 @@
 ​
 ## Team Name: The Moovers
 ​
-[Link to Deployed Project](<<add_deployed_link_to_project_here>>)
+The website can be accessed by this [link](https://lexach91.github.io/team9-Jan2023-CI-hackathon/)
 ​
 ## Contents(#contents)
 ​
@@ -41,16 +41,18 @@ In an idea scenario, the user would be able to use the link to book the flight d
 ## Technology:
 ​
 ### Languages
-	- HTML5 - Latest version of HTML. Allows us to put content on the page.
-	- CSS3 - Latest version of CSS. Allows for custom styling.
-	- JavaScript - Used to manage APIs and code the search box.
+- [HTML5](https://en.wikipedia.org/wiki/HTML5) - Latest version of HTML. Allows us to put content on the page.
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) - Latest version of CSS. Allows for custom styling.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Used to manage APIs, code the search box, mobile menu, and a modal.
+- [jQuery](https://jquery.com/) - Used for better use of selectors in the api.js file and to simplify DOM manipulation.
 ​
 ### Tools
-	- TailwindCSS - Allows for fast inline styling in HTML 
+- [TailwindCSS](https://tailwindcss.com/) - Allows for fast inline styling in HTML.
+- [Jest](https://jestjs.io/) - Used to test the site.
 ​
 ## Initial MVP idea:
 ​
-As a team we had a call on Slack to descide on the scope of the project. We decided that we wanted to have a static page with anchors to make it simple to use.
+As a team we had a call on Slack to decide on the scope of the project. We decided that we wanted to have a static page with anchors to make it simple to use.
 We would have a navigation bar with the site logo and anchors, landing image with a call to action button, search flights section, about section, reviews, and the footer.
 The basic concept would be that we would provide the user with the cheapest flights based on the information they provided to us.
 Initially it was up in the air as to what information we would request because it would depend on what we could do with the APIs we could find...
@@ -62,8 +64,8 @@ The initial scope concluded with the user being able to click on a link to an ex
 The final product is very close in comparison to the initial scope. The one limitation we had was due to the use of free APIs which did not provide enough information
 for us to create the link for the user to book their holiday.
 
-In addition, the ID provided by the free API is not unique, and so the user will be shown information about the earlist flight with the same ID.
-This is not ideal and we could have perhaps changed the concept but by the time we realised, the project was coming to a close and so it was too late to change.
+In addition, the ID provided by the free API is not unique, and so the user will be shown information about the earliest flight with the same ID.
+This is not ideal and we could have perhaps changed the concept but by the time we realized, the project was coming to a close and so it was too late to change.
 ​
 - Navigation Bar
 	- This is a fully responsive navigation bar which includes the logo and anchors to the site's "Home", "Search Flights", "About Us", and "Reviews" sections.
@@ -102,17 +104,36 @@ This is not ideal and we could have perhaps changed the concept but by the time 
 Keeping in congruent with the "cow" theme, we decided to go for a black and white theme with scattered hints of pink alluding to a cow's nose.
 ​
 ### Typography:
-<< what font pairings did your team consider and pick? And why? >>
+Happy with Tailwind CSS typography styles.
 ​
 ### Imagery:
 Being a travel website, we primarily used emotive imagery of beautiful landscapes - all places our user could end up visiting.
 ​
 ### Wireframes:
 ​
-Please refer to [moovers-wireframes.pdf](https://lexach91.github.io/team9-Jan2023-CI-hackathon/documentation/wireframes/moovers-wireframes.pdf)
+Please refer to [moovers-wireframes.pdf](documentation/wireframes/moovers-wireframes.pdf)
 ​
 ## Deployment
-<< detail deployment methods used here, and any extraneous circumstances to run the project locally >>
+The Website was deployed to GitHub pages.
+
+The steps to deploy:
+
+Open the Website's GitHub repository
+Click on the "settings" tab in the upper right corner
+In the left sidebar menu, click on the "Pages" button
+Choose the branch that needs to be deployed
+Click the "save" button
+
+
+To clone the repository to your local machine copy the command bellow and paste it to your terminal:
+
+`git clone https://github.com/lexach91/team9-Jan2023-CI-hackathon.git`
+
+To open the repository in Gitpod:
+
+If you have Gitpod extension installed in your browser, press the green button which reads GitPod.
+
+If you don't have Gitpod extension installed in your browser, click this link: https://gitpod.io/#https://github.com/lexach91/team9-Jan2023-CI-hackathon
 ​
 ## Testing
 
@@ -133,6 +154,7 @@ All content is original.
 ### Media
 The images were sourced from pexels.com
 The about background was sourced from vectorstock.com
+The icon was created by sourcing an image from clker.com
 ​
 ### Acknowledgements
-Thank you to http://www.flightstats.com/ for providing flight information.
+Thanks to http://www.flightstats.com/ for providing flight information.
