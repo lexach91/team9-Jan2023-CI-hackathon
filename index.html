@@ -1,312 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>Moovers</title>
-    <link rel="icon" type="image/x-icon" href="./assets/img/cow.png" />
+  <title>Moovers</title>
+  <link rel="icon" type="image/x-icon" href="./assets/img/cow.png">
 
-    <link rel="stylesheet" href="assets/css/output.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/output.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- jQuery UI -->
-    <link
-      rel="stylesheet"
-      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
-    />
-    <!-- font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <nav
-      id="nav"
-      class="w-full bg-white fixed flex justify-between items-center flex-wrap shadow-sm px-7 md:px-2 py-5 z-10"
-    >
-      <div class="container flex justify-between items-center flex-wrap mx-auto">
-        <a href="index.html">
-          <img src="./assets/img/logo-1.png" width="140" alt="logo">
+  <!-- jQuery UI -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+
+<body>
+  <nav id="nav"
+    class="w-full bg-white fixed flex justify-between items-center flex-wrap shadow-sm px-7 md:px-2 py-5 z-10">
+    <div class="container flex justify-between items-center flex-wrap mx-auto">
+      <a href="index.html">
+        <img src="./assets/img/logo-1.png" width="140" alt="logo">
+      </a>
+      <div id="mobile-menu" class="block">
+        <button class="flex items-center px-3 py-2 border rounded text-gray-300 md:hidden">
+          <!-- Resource: Hamburger icon https://www.flaticon.com/free-icons/hamburger -->
+          <img src="./assets/img/menu.png" width="20" alt="menu button">
+        </button>
+      </div>
+      <div id="nav-items" class="items-center text-base">
+        <!-- Resource: Icons https://fontawesome.com/ -->
+        <a href="#" class="menu-item px-1 py-3 w-full hover:text-[#ff0080]">
+          <i class="fa-solid fa-house md:hidden mr-3 text-[#ff0080]"></i>
+          Home
         </a>
-        <div id="mobile-menu" class="block">
-          <button
-            class="flex items-center px-3 py-2 border rounded text-gray-300 md:hidden"
-          >
-            <!-- Resource: Hamburger icon https://www.flaticon.com/free-icons/hamburger -->
-            <img src="./assets/img/menu.png" width="20" alt="menu button"/>
-          </button>
-        </div>
-        <ul id="nav-items" class="items-center text-base">
-          <!-- Resource: Icons https://fontawesome.com/ -->
-          <a href="#" class="menu-item px-1 py-3 w-full hover:text-[#ff0080]">
-            <i class="fa-solid fa-house md:hidden mr-3 text-[#ff0080]"></i>
-            Home
-          </a>
 
 
-          <a href="#search-section" class="menu-item px-1 py-3 w-full hover:text-[#ff0080]">
+        <a href="#search-section" class="menu-item px-1 py-3 w-full hover:text-[#ff0080]">
 
-            <i class="fa-sharp fa-solid fa-plane md:hidden mr-3 text-[#ff0080]"></i>
-            Search Flights
-          </a>
-          <a href="#about-us" class="menu-item px-1 py-3 w-full hover:text-[#ff0080]">
-            <i class="fa-solid fa-circle-info md:hidden mr-3 text-[#ff0080]"></i>
-            About Us
-          </a>
-          <a href="#reviews" class="menu-item px-1 py-3 w-full hover:text-[#ff0080]">
-            <i class="fa-solid fa-circle-check md:hidden mr-3 text-[#ff0080]"></i>
-            Reviews
-          </a>
-          <a
-            href="#"
-            id="myBtn"
-            class="menu-item px-1 py-1 w-full hover:text-[#ff0080]"
-          >
-            <i class="fa-solid fa-circle-question md:hidden mr-3 text-[#ff0080]"></i>
-            How It Works
-          </a>
-        </ul>
+          <i class="fa-sharp fa-solid fa-plane md:hidden mr-3 text-[#ff0080]"></i>
+          Search Flights
+        </a>
+        <a href="#about-us" class="menu-item px-1 py-3 w-full hover:text-[#ff0080]">
+          <i class="fa-solid fa-circle-info md:hidden mr-3 text-[#ff0080]"></i>
+          About Us
+        </a>
+        <a href="#reviews" class="menu-item px-1 py-3 w-full hover:text-[#ff0080]">
+          <i class="fa-solid fa-circle-check md:hidden mr-3 text-[#ff0080]"></i>
+          Reviews
+        </a>
+        <a href="#" id="myBtn" class="menu-item px-1 py-1 w-full hover:text-[#ff0080]">
+          <i class="fa-solid fa-circle-question md:hidden mr-3 text-[#ff0080]"></i>
+          How It Works
+        </a>
       </div>
-
-    </nav>
-    <!-- Hero text -->
-    <div class="hero-heading translate-y-48 mx-auto container pl-4">
-      <h1 class="font-semibold text-white text-3xl md:text-5xl mb-11">
-        Helping you <em>m<span class="text-[#ff0080]">oo</span>ve</em> <br />on a budget.
-      </h1>
-      <a href="#search-section" class="bg-white rounded-md mt-6 text-lg px-3 py-5 font-bold"
-        >Search Flights</a
-      >
     </div>
-    <!-- Banner carousel -->
-    <section id="carousel">
-      <!-- Resource: Images from https://www.pexels.com/ -->
-      <!-- Slide 1-->
-      <div class="slides">
-        <img
-          src="assets/img/hero-image-1.jpg"
-          alt="Deep blue ocean with sunny blue skies"
-          class="w-full"
-          height="500"
-        />
-      </div>
-      <!-- Slide 2 -->
-      <div class="slides">
-        <img
-          src="assets/img/hero-image-2.jpg"
-          alt="Body of Water With People Rowring on Boat Beside Tall Building Venice"
-          class="w-full"
-        />
-      </div>
-      <!-- Slide 3 -->
-      <div class="slides">
-        <img
-          src="assets/img/hero-image-3.jpg"
-          alt="Brown rock formation of the sea"
-          class="w-full"
-        />
-      </div>
+
+  </nav>
+  <!-- Hero text -->
+  <div class="hero-heading translate-y-48 mx-auto container pl-4">
+    <h1 class="font-semibold text-white text-3xl md:text-5xl mb-11">
+      Helping you <em>m<span class="text-[#ff0080]">oo</span>ve</em> <br>on a budget.
+    </h1>
+    <a href="#search-section" class="bg-white rounded-md mt-6 text-lg px-3 py-5 font-bold">Search Flights</a>
+  </div>
+  <!-- Banner carousel -->
+  <section id="carousel">
+    <!-- sr-only heading -->
+    <h2 class="sr-only">Banner carousel</h2>
+    <!-- Resource: Images from https://www.pexels.com/ -->
+    <!-- Slide 1-->
+    <div class="slides">
+      <img src="assets/img/hero-image-1.jpg" alt="Deep blue ocean with sunny blue skies" class="w-full" height="500">
+    </div>
+    <!-- Slide 2 -->
+    <div class="slides">
+      <img src="assets/img/hero-image-2.jpg" alt="Body of Water With People Rowring on Boat Beside Tall Building Venice"
+        class="w-full">
+    </div>
+    <!-- Slide 3 -->
+    <div class="slides">
+      <img src="assets/img/hero-image-3.jpg" alt="Brown rock formation of the sea" class="w-full">
     </div>
     <!-- Circle indicators -->
     <div class="circle-indicators text-center -translate-y-10">
-      <span
-        class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"
-      ></span>
-      <span
-        class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"
-      ></span>
-      <span
-        class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"
-      ></span>
-    </section>
-
-    <!-- use tailwind to create search box -->
-    <section id="search-section" class="container mx-auto my-12 p-4 bg-white rounded-lg py-12">
-      <h2 class="text-2xl font-bold mb-5">
-        Search Flights
-        <!-- typewriter effect -->
-        <span
-        id="txt-rotate"
-        class="text-[#ff0080] text-2xl font-bold"
-        data-period="2000"
-        data-rotate='[ "for your budget","for your next adventure", "for your soul" ]'
-        ></span>
-        <span class="typing text-[#ff0080] text-2xl font-bold ml-[-8px]" id="cursor"
-          >|</span>
-      </h2>
-      
-      <div
-        id="animated-search-form"
-        class="md:flex justify-between py-5 border-2 border-[#ff0080]/75 rounded-lg p-4"
-      >
-        <div id="form-left" class="w-full transition-all">
-          <div class="relative mb-2">
-            <input
-              type="text"
-              id="city-search"
-              class="w-full border-2 border-[#ff0080]/50 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
-              placeholder="Start typing your city or airport name"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-              style="
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-                color: #a0aec0;
-                margin: 0 10px;
-              "
-            >
-              <path
-                id="search-icon"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-              />
-            </svg>
-
-            <div
-              id="city-search-dropdown"
-              class="absolute invisible top-0 left-0 w-full bg-white border-2 border-gray-300 rounded-lg mt-10 z-10 max-h-96 overflow-y-scroll overflow-x-hidden"
-            ></div>
-          </div>
-          <!-- select currency -->
-          <select
-            id="currency"
-            class="w-0 invisible hidden mb-2 transition-all border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
-          >
-            <option value="USD">USD</option>
-            <option value="EUR">EUR</option>
-            <option value="GBP">GBP</option>
-          </select>
-          <!-- enter max price -->
-          <div class="relative mb-2">
-            <input
-              type="number"
-              id="max-price"
-              class="w-0 invisible hidden transition-all border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
-              placeholder="Your budget"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 invisible"
-              style="
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-                color: #a0aec0;
-                margin: 0 10px;
-              "
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </div>
-          <!-- search button -->
-          <button
-            id="search-button"
-            disabled
-            class="w-0 invisible hidden transition-all border-2 border-gray-300 bg-gray-200 h-10 px-5 rounded-lg text-sm focus:outline-none disabled:hover:cursor-not-allowed mb-5 md:mb-1"
-          >
-            Search
-          </button>
-          <button
-            id="reset-search"
-            class="w-0 invisible hidden transition-all border-2 border-gray-300 bg-gray-100 h-10 px-5 rounded-lg text-sm focus:outline-none disabled:hover:cursor-not-allowed mb-5 md:mb-1"
-          >
-            Reset
-          </button>
-        </div>
-        <div
-          id="form-right"
-          class="w-0 invisible hidden transition-all flex justify-center items-center px-5"
-        >
-          <!-- flight search results will go here -->
-          <div
-            id="flight-search-results"
-            class="flex flex-col justify-center items-center h-full w-full"
-          >
-            <div class="flex justify-center items-center w-full">
-              <div
-                id="results-placeholder"
-                class="flex flex-col justify-center items-center w-full"
-              >
-                <img
-                  src="assets/media/cow-face.png"
-                  alt="placeholder"
-                  class="w-10 h-10"
-                />
-                <p class="text-black pt-2">
-                  Choose an airport and a budget to start your search
-                </p>
-              </div>
-              <div
-                id="results"
-                class="flex flex-col items-center h-full hidden max-h-96 overflow-y-scroll w-full"
-              ></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <span class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"></span>
+      <span class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"></span>
+      <span class="circle rounded-full inline-block h-3.5 w-3.5 bg-white my-0 mx-0.5"></span>
     </div>
-    <!-- About us section -->
-    <section id="about-us" class="px-[7%] h-auto">
-      <div class="about-bg"></div>
-      <div class="about-content">
-        <h2 class="text-6xl text-center m-[7%] font-bold">Wh<span>oo</span> we Are</h2>
-        <p class="text-2xl m-[7%] mt-0 p-4 text-center border-solid border-pink-100 font-semibold">
-          MOOVERS is your best friend when it comes to the cheapest of holidays. Why? Well that's because MOOVERS was created BY holiday makers FOR holiday makers.<br><br>
-          Have you ever had the feeling that you just wanted to escape your every day life? We certainatly have. That's why we came together and created MOOVERS.
-          Sometimes you may not be too fussed where you go, just that it's in your budget... and for that, MOOVERS is just what you need!
-        </p>
+  </section>
+
+  <!-- use tailwind to create search box -->
+  <section id="search-section" class="container mx-auto my-12 p-4 bg-white rounded-lg py-12">
+    <h2 class="text-2xl font-bold mb-5">
+      Search Flights
+      <!-- typewriter effect -->
+      <span id="txt-rotate" class="text-[#ff0080] text-2xl font-bold" data-period="2000"
+        data-rotate='[ "for your budget","for your next adventure", "for your soul" ]'></span>
+      <span class="typing text-[#ff0080] text-2xl font-bold ml-[-8px]" id="cursor">|</span>
+    </h2>
+
+    <div id="animated-search-form" class="md:flex justify-between py-5 border-2 border-[#ff0080]/75 rounded-lg p-4">
+      <div id="form-left" class="w-full transition-all">
+        <div class="relative mb-2">
+          <input type="text" id="city-search"
+            class="w-full border-2 border-[#ff0080]/50 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+            placeholder="Start typing your city or airport name">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6" style="
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                color: #a0aec0;
+                margin: 0 10px;
+              ">
+            <path id="search-icon" stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+          </svg>
+
+          <div id="city-search-dropdown"
+            class="absolute invisible top-0 left-0 w-full bg-white border-2 border-gray-300 rounded-lg mt-10 z-10 max-h-96 overflow-y-scroll overflow-x-hidden">
+          </div>
+        </div>
+        <!-- select currency -->
+        <select id="currency"
+          class="w-0 invisible hidden mb-2 transition-all border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+        </select>
+        <!-- enter max price -->
+        <div class="relative mb-2">
+          <input type="number" id="max-price"
+            class="w-0 invisible hidden transition-all border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+            placeholder="Your budget">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 invisible" style="
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                color: #a0aec0;
+                margin: 0 10px;
+              ">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <!-- search button -->
+        <button id="search-button" disabled
+          class="w-0 invisible hidden transition-all border-2 border-gray-300 bg-gray-200 h-10 px-5 rounded-lg text-sm focus:outline-none disabled:hover:cursor-not-allowed mb-5 md:mb-1">
+          Search
+        </button>
+        <button id="reset-search"
+          class="w-0 invisible hidden transition-all border-2 border-gray-300 bg-gray-100 h-10 px-5 rounded-lg text-sm focus:outline-none disabled:hover:cursor-not-allowed mb-5 md:mb-1">
+          Reset
+        </button>
       </div>
-    </section>
-    <!-- Reviews section -->
-    <section
-      class="mb-12 bg-neutral-50 py-12"
-      id="reviews"
-    >
-    <div class="container mx-auto justify-items-center review-cards sm:text-left p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div id="form-right" class="w-0 invisible hidden transition-all flex justify-center items-center px-5">
+        <!-- flight search results will go here -->
+        <div id="flight-search-results" class="flex flex-col justify-center items-center h-full w-full">
+          <div class="flex justify-center items-center w-full">
+            <div id="results-placeholder" class="flex flex-col justify-center items-center w-full">
+              <img src="assets/media/cow-face.png" alt="placeholder" class="w-10 h-10">
+              <p class="text-black pt-2">
+                Choose an airport and a budget to start your search
+              </p>
+            </div>
+            <div id="results" class="flex flex-col items-center h-full hidden max-h-96 overflow-y-scroll w-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About us section -->
+  <section id="about-us" class="px-[7%] h-auto">
+    <div class="about-bg"></div>
+    <div class="about-content">
+      <h2 class="text-6xl text-center m-[7%] font-bold">Wh<span>oo</span> we Are</h2>
+      <p class="text-2xl m-[7%] mt-0 p-4 text-center border-solid border-pink-100 font-semibold">
+        MOOVERS is your best friend when it comes to the cheapest of holidays. Why? Well that's because MOOVERS was
+        created BY holiday makers FOR holiday makers.<br><br>
+        Have you ever had the feeling that you just wanted to escape your every day life? We certainatly have. That's
+        why we came together and created MOOVERS.
+        Sometimes you may not be too fussed where you go, just that it's in your budget... and for that, MOOVERS is just
+        what you need!
+      </p>
+    </div>
+  </section>
+
+  <!-- Reviews section -->
+
+  <section class="mb-12 bg-neutral-50 py-12" id="reviews">
+    <h2 class="sr-only">
+      Reviews
+    </h2>
+    <div
+      class="container mx-auto justify-items-center review-cards sm:text-left p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
       <!-- Review header -->
-      <article
-        class="review-header md:justify-self-start tile col-span-1 md:col-span-2 lg:col-span-3 mb-5"
-      >
+      <article class="review-header md:justify-self-start tile col-span-1 md:col-span-2 lg:col-span-3 mb-5">
         <h2 class="text-2xl font-bold">Customer Reviews</h2>
-        <div
-          class="leading-8 content-end grid grid-cols-1 md:grid-cols-[max-content_1fr]"
-        >
+        <div class="leading-8 content-end grid grid-cols-1 md:grid-cols-[max-content_1fr]">
           <div class="text-xl pr-2">
             <p>
-              <span class="text-yellow-400"
-                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-                ><i class="fa-solid fa-star-half-stroke"></i
-              ></span>
+              <span class="text-yellow-400"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star-half-stroke"></i></span>
               4.5/5 Stars
             </p>
           </div>
@@ -317,19 +226,13 @@
       </article>
       <!-- Card 1 -->
       <article
-        class="review-card-container grid h-[350px] w-[275px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#ff0080] bg-white"
-      >
+        class="review-card-container grid h-[350px] w-[275px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#ff0080] bg-white">
         <div class="review-card">
           <div class="review-card-top grid grid-cols-2 p-3 place-items-center">
-            <img
-              src="assets/img/man.jpg"
-              alt="Reviewer image"
-              class="rounded-full h-[75px] w-[75px] object-cover"
-            />
+            <img src="assets/img/man.jpg" alt="Reviewer image" class="rounded-full h-[75px] w-[75px] object-cover">
             <div class="text-yellow-400 justify-self-start">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-              ><i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
             </div>
           </div>
           <div class="review-card-bottom p-5">
@@ -341,19 +244,13 @@
       </article>
       <!-- Card 2 -->
       <article
-        class="review-card-container grid h-[350px] w-[275px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#ff0080] bg-white"
-      >
+        class="review-card-container grid h-[350px] w-[275px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#ff0080] bg-white">
         <div class="review-card">
           <div class="review-card-top grid grid-cols-2 p-3 place-items-center">
-            <img
-              src="assets/img/woman.jpg"
-              alt="Reviewer image"
-              class="rounded-full h-[75px] w-[75px] object-cover"
-            />
+            <img src="assets/img/woman.jpg" alt="Reviewer image" class="rounded-full h-[75px] w-[75px] object-cover">
             <div class="text-yellow-400 justify-self-start">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-              ><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
           </div>
           <div class="review-card-bottom p-5">
@@ -368,19 +265,13 @@
       </article>
       <!-- Card 3 - Will be hidden on mobile and tablet view -->
       <article
-        class="review-card-container hidden lg:block h-[350px] w-[275px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#ff0080] bg-white"
-      >
+        class="review-card-container hidden lg:block h-[350px] w-[275px] shadow-lg rounded-lg shadow-slate-500 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#ff0080] bg-white">
         <div class="review-card">
           <div class="review-card-top grid grid-cols-2 p-3 place-items-center">
-            <img
-              src="assets/img/woman2.jpg"
-              alt="Reviewer image"
-              class="rounded-full h-[75px] w-[75px] object-cover"
-            />
+            <img src="assets/img/woman2.jpg" alt="Reviewer image" class="rounded-full h-[75px] w-[75px] object-cover">
             <div class="text-yellow-400 justify-self-start">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
-              ><i class="fa-regular fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
             </div>
           </div>
           <div class="review-card-bottom p-5">
@@ -394,104 +285,101 @@
         </div>
       </article>
     </div>
-    </section>
-    <!-- Modal starts here -->
-    <div
-      id="myModal"
-      class="modal hidden fixed z-10 top-0 w-full h-full overflow-auto bg-black bg-opacity-70 transition-all flex justify-center items-center"
-    >
-      <!-- Modal content -->
-      <div
-
-        class="modal-content bg-opacity-100 text-white mx-auto mt-4 p-4 border w-3/4 sm:w-1/2 border-white rounded-lg"
-
-      >
-        <div>
-          <span
-            class="close float-right text-xl cursor-pointer hover:text-[#ff0080]"
-            >&times;</span
-          >
-          <p class="pb-2 font-bold border-b-[1px] border-[#ff0080]">How it works</p>
-          <br />
+  </section>
+  <!-- Modal starts here -->
+  <div id="myModal"
+    class="modal hidden fixed z-10 top-0 w-full h-full overflow-auto bg-black bg-opacity-70 transition-all flex justify-center items-center">
+    <!-- Modal content -->
+    <div class="modal-content bg-opacity-100 text-white mx-auto mt-4 p-4 border w-3/4 sm:w-1/2 border-white rounded-lg">
+      <div>
+        <span class="close float-right text-xl cursor-pointer hover:text-[#ff0080]">&times;</span>
+        <p class="pb-2 font-bold border-b-[1px] border-[#ff0080]">How it works</p>
+        <br>
+      </div>
+      <div>
+        <div class="flex py-2">
+          <i class="fa-solid fa-sack-dollar text-[#ff0080]"></i>
+          <p class="pl-4">Set your budget</p>
         </div>
-        <div>
-          <div class="flex py-2">
-            <i class="fa-solid fa-sack-dollar text-[#ff0080]"></i>
-            <p class="pl-4">Set your budget</p>
-          </div>
-          <div class="flex py-2">
-            <i class="fa-solid fa-magnifying-glass-location text-[#ff0080]"></i>
-            <p class="pl-4">Look for the cheapest flights and destinations</p>
-          </div>
-          <div class="flex py-2">
-            <i class="fa-solid fa-person-walking-luggage text-[#ff0080]"></i>
-            <p class="pl-4">Pack your luggage</p>
-          </div>
-          <div class="flex py-2">
-            <i class="fa-solid fa-plane-departure text-[#ff0080]"></i>
-            <p class="pl-4">Enjoy yourself!</p>
-          </div>
+        <div class="flex py-2">
+          <i class="fa-solid fa-magnifying-glass-location text-[#ff0080]"></i>
+          <p class="pl-4">Look for the cheapest flights and destinations</p>
+        </div>
+        <div class="flex py-2">
+          <i class="fa-solid fa-person-walking-luggage text-[#ff0080]"></i>
+          <p class="pl-4">Pack your luggage</p>
+        </div>
+        <div class="flex py-2">
+          <i class="fa-solid fa-plane-departure text-[#ff0080]"></i>
+          <p class="pl-4">Enjoy yourself!</p>
         </div>
       </div>
     </div>
-    <!--end of modal  -->
-    <!-- footer -->
-    <footer class="text-center h-full bg-gray-50 border-t border-black">
-      <div class="sticky inset-x-0 bottom-0">
-        <!-- github accounts container -->
-          <div class="flex justify-around px-2 md:px-7 pt-2">
-            <div>
-              <div>
-                <a href="https://github.com/JessicaJuliet" target="_blank" class="text-lg md:text-2xl" aria-label="Jess' github account">
-                  <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
-                </a>
-                <p>Jess</p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <a href="https://github.com/Ant2210" target="_blank" class="text-lg md:text-2xl" aria-label="Ant's github account">
-                  <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
-                </a>
-                <p>Ant</p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <a href="https://github.com/lexach91" target="_blank" class="text-lg md:text-2xl" aria-label="Aleksei's github account">
-                  <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
-                </a>
-                <p>Aleksei</p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <a href="https://github.com/PVieira04" target="_blank" class="text-lg md:text-2xl" aria-label="Patrick's github account">
-                  <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
-                </a>
-                <p>Patrick</p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <a href="https://github.com/StefanMdvs" target="_blank" class="text-lg md:text-2xl" aria-label="Stefan's github account">
-                  <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
-                </a>
-                <p>Stefan</p>
-              </div>
-            </div>
+  </div>
+  <!--end of modal  -->
+  <!-- footer -->
+  <footer class="text-center h-full bg-gray-50 border-t border-black">
+    <div class="sticky inset-x-0 bottom-0">
+      <!-- github accounts container -->
+      <div class="flex justify-around px-2 md:px-7 pt-2">
+        <div>
+          <div>
+            <a href="https://github.com/JessicaJuliet" target="_blank" class="text-lg md:text-2xl"
+              aria-label="Jess' github account">
+              <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
+            </a>
+            <p>Jess</p>
           </div>
-        <!-- logo -->
-        <p class="p-4 tracking-wide text-center">
-          <img class="mx-auto" src="./assets/img/logo-transparent.png" width="140" alt="Logo image">
-        </p>
+        </div>
+        <div>
+          <div>
+            <a href="https://github.com/Ant2210" target="_blank" class="text-lg md:text-2xl"
+              aria-label="Ant's github account">
+              <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
+            </a>
+            <p>Ant</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <a href="https://github.com/lexach91" target="_blank" class="text-lg md:text-2xl"
+              aria-label="Aleksei's github account">
+              <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
+            </a>
+            <p>Aleksei</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <a href="https://github.com/PVieira04" target="_blank" class="text-lg md:text-2xl"
+              aria-label="Patrick's github account">
+              <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
+            </a>
+            <p>Patrick</p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <a href="https://github.com/StefanMdvs" target="_blank" class="text-lg md:text-2xl"
+              aria-label="Stefan's github account">
+              <i class="fa-brands fa-github p-1 m-1 text-[#ff0080]"></i>
+            </a>
+            <p>Stefan</p>
+          </div>
+        </div>
       </div>
-    </footer>
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- jQuery UI -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/api2.js"></script>
-  </body>
+      <!-- logo -->
+      <p class="p-4 tracking-wide text-center">
+        <img class="mx-auto" src="./assets/img/logo-transparent.png" width="140" alt="Logo image">
+      </p>
+    </div>
+  </footer>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- jQuery UI -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/api.js"></script>
+</body>
+
 </html>
